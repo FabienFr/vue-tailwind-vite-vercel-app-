@@ -1,17 +1,25 @@
 <template>
     <div class="w-full max-w-3xl mx-auto">
-        <img alt="Vue logo" class="mx-auto my-12" src="./assets/logo.png" />
-        <HelloWorld msg="Vue + Vite + Tailwind Starter" />
+        <Header 
+            title="Inscription aux Leagues"           
+            subtitle="Clans Tempête, Sympathique, Tinkmaster4, fils d'Arès"
+            period="Mai 2022"
+        />
+        <Form2 />
     </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/Header.vue'
+import Form from './components/Form.vue'
+import Form2 from './components/Form2.vue'
 
 export default {
     name: 'App',
     components: {
-        HelloWorld,
+        Header,
+        // Form,
+        Form2,
     },
     mounted() {
         const { timeZone, locale } = Intl.DateTimeFormat().resolvedOptions()

@@ -6,7 +6,11 @@ module.exports = {
     ],
     darkMode: false,
     theme: {
-        extend: {},
+        extend: {
+            fontFamily: {
+                supercell: ["supercell-magic-webfont", "cursive"],
+            }
+        },
     },
     variants: {
         extend: {},
