@@ -5,21 +5,19 @@
             subtitle="Clans Tempête, Sympathique, Tinkmaster4, fils d'Arès"
             period="Mai 2022"
         />
-        <Form2 />
+        <Spreadsheet />
     </div>
 </template>
 
 <script>
 import Header from './components/Header.vue'
-import Form from './components/Form.vue'
-import Form2 from './components/Form2.vue'
+import Spreadsheet from './components/Spreadsheet.vue'
 
 export default {
     name: 'App',
     components: {
         Header,
-        // Form,
-        Form2,
+        Spreadsheet
     },
     mounted() {
         const { timeZone, locale } = Intl.DateTimeFormat().resolvedOptions()
