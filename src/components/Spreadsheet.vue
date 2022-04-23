@@ -262,7 +262,6 @@
 </template>
 
 <script>
-import axios from 'axios'
 
 export default {
     name: 'Spreadsheet',
@@ -278,20 +277,20 @@ export default {
             ligue: '',
         }
     },
-    mounted() {
-        // Fetch the Liste data from Sheetson API
-        axios
-            .get('https://api.sheetson.com/v2/sheets/Liste', {
-                headers: {
-                    'Content-Type': 'application/json',
-                    Authorization:
-                        'Bearer 7G3QuA3qYNI2dNCfCq-ZGSsgiOSL4gTj47Ut09EcQSi0OcdzLIyO0FIcYtg',
-                    'X-Sheetson-Spreadsheet-Id':
-                        '1rEwK7ZTiVnvuvMZeKp-qTl8ObQe_Cawa9ItHkgVJBHE',
-                },
-            })
-            .then((response) => (this.liste = response.data.results))
-    },
+    // mounted() {
+    //     // Fetch the Liste data from Sheetson API
+    //     axios
+    //         .get('https://api.sheetson.com/v2/sheets/Liste', {
+    //             headers: {
+    //                 'Content-Type': 'application/json',
+    //                 Authorization:
+    //                     'Bearer 7G3QuA3qYNI2dNCfCq-ZGSsgiOSL4gTj47Ut09EcQSi0OcdzLIyO0FIcYtg',
+    //                 'X-Sheetson-Spreadsheet-Id':
+    //                     '1rEwK7ZTiVnvuvMZeKp-qTl8ObQe_Cawa9ItHkgVJBHE',
+    //             },
+    //         })
+    //         .then((response) => (this.liste = response.data.results))
+    // },
     methods: {
         addChoice() {
             this.ligue = this.value
