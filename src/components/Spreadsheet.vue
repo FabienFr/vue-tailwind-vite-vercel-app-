@@ -103,143 +103,6 @@
                 Niveau de ligue souhaité
             </h1>
             <Ligue v-model="ligue" />
-            <!-- <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-8">
-                <button
-                    type="button"
-                    value="cactus"
-                    name="cactus"
-                    @click.prevent="addChoice"
-                    aria-label="card 1"
-                    class="rounded hover:bg-lightgrey focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none focus:bg-white"
-                >
-                    <div
-                        class="shadow px-8 py-6 flex items-center justify-center"
-                    >
-                        <div>
-                            <h3
-                                class="mb-1 leading-5 text-orange dark:text-gray-100 font-supercell font-bold text-2xl"
-                            >
-                                Cactus
-                            </h3>
-                            <p
-                                class="text-beige text-xl tracking-normal font-bold leading-5 mt-3"
-                            >
-                                full hdv 14
-                            </p>
-                            <p
-                                class="text-beige text-lg tracking-normal font-supercell font-normal leading-5 mt-3"
-                            >
-                                Master 1
-                            </p>
-                        </div>
-                    </div>
-                </button>
-                <button
-                    type="button"
-                    value="kipik"
-                    name="kipik"
-                    @click.prevent="addChoice"
-                    aria-label="card 2"
-                    class="rounded hover:bg-lightgrey focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none focus:bg-white"
-                >
-                    <div
-                        class="shadow px-8 py-6 flex items-center justify-center"
-                    >
-                        <div>
-                            <h3
-                                class="mb-1 leading-5 text-orange dark:text-gray-100 font-supercell font-bold text-2xl"
-                            >
-                                Kipik
-                            </h3>
-                            <p
-                                class="text-beige text-xl tracking-normal font-bold leading-5 mt-3"
-                            >
-                                full hdv 14
-                            </p>
-                            <p
-                                class="text-beige text-lg tracking-normal font-supercell font-normal leading-5 mt-3"
-                            >
-                                Master 2
-                            </p>
-                        </div>
-                    </div>
-                </button>
-                <button
-                    type="button"
-                    value="rose"
-                    name="rose"
-                    @click.prevent="addChoice"
-                    aria-label="card 3"
-                    class="rounded hover:bg-lightgrey focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none focus:bg-white"
-                >
-                    <div
-                        class="shadow px-8 py-6 flex items-center justify-center"
-                    >
-                        <div>
-                            <h3
-                                class="mb-1 leading-5 text-orange dark:text-gray-100 font-supercell font-bold text-2xl"
-                            >
-                                Rose
-                            </h3>
-                            <p
-                                class="text-beige text-xl tracking-normal font-bold leading-5 mt-3"
-                            >
-                                mixte hdv 13-14
-                            </p>
-                            <p
-                                class="text-beige text-lg tracking-normal font-supercell font-normal leading-5 mt-3"
-                            >
-                                Master 3
-                            </p>
-                        </div>
-                    </div>
-                </button>
-                <button
-                    type="button"
-                    value="paquerette"
-                    name="paquerette"
-                    @click.prevent="addChoice"
-                    aria-label="card 4"
-                    class="rounded hover:bg-lightgrey focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none focus:bg-white"
-                >
-                    <div
-                        class="shadow px-8 py-6 flex items-center justify-center"
-                    >
-                        <div class="ml-6">
-                            <h3
-                                class="mb-1 leading-5 text-orange font-supercell font-bold text-2xl"
-                            >
-                                Pâquerette
-                            </h3>
-                            <p
-                                class="text-beige text-xl tracking-normal font-bold leading-5 mt-3"
-                            >
-                                mixte hdv 9-14
-                            </p>
-                            <p
-                                class="text-beige text-lg tracking-normal font-supercell font-normal leading-5 mt-3"
-                            >
-                                Cristal 3
-                            </p>
-                        </div>
-                    </div>
-                </button>
-                <button
-                    type="button"
-                    value="-"
-                    name="-"
-                    @click.prevent="addChoice"
-                    class="w-full rounded hover:bg-lightgrey focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none focus:bg-white col-span-2"
-                >
-                    <div
-                        class="shadow px-8 py-6 flex items-center justify-center"
-                    >
-                        <p class="font-supercell text-orange text-2xl">
-                            Faites de moi ce que vous voulez !
-                        </p>
-                    </div>
-                </button>
-            </div> -->
         </section>
         <section v-if="hdv" class="min-w-full">
             <div class="w-full my-10 py-5 px-5 bg-gray-50 rounded-xl">
@@ -263,7 +126,7 @@
                     Hdv : {{ hdv }}
                 </p>
                 <p class="font-supercell text-white text-2xl mb-6">
-                    Ligue préférée : {{ league }}
+                    Ligue préférée : {{ ligue }}
                 </p>
                 <button
                     @click.prevent="newForm"
@@ -345,7 +208,7 @@ export default {
             console.log('Hdv : ' + this.hdv);
             this.hdv = '';
             console.log('Choix de ligue : ' + this.ligue);
-            this.ligue = '';
+            this.ligue = null;
         },
 
     },

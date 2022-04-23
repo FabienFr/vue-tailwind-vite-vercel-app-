@@ -1,6 +1,6 @@
 <template>
     <ul class="grid sm:grid-cols-1 md:grid-cols-2 gap-8">
-        <li :class="{ active: ligue === 'cactus' }">
+        <li :class="{ active: activeOption === 'cactus' }">
             <button 
                 type="button" 
                 @click="activate('cactus')" 
@@ -19,7 +19,7 @@
                 </div>
             </button>
         </li>
-        <li :class="{ active: ligue === 'kipik' }">
+        <li :class="{ active: activeOption === 'kipik' }">
             <button 
                 type="button" 
                 @click="activate('kipik')" 
@@ -38,7 +38,7 @@
                 </div>
             </button>
         </li>
-        <li :class="{ active: ligue === 'rose' }">
+        <li :class="{ active: activeOption === 'rose' }">
             <button 
                 type="button" 
                 @click="activate('rose')" 
@@ -57,7 +57,7 @@
                 </div>
             </button>
         </li>
-        <li :class="{ active: ligue === 'paquerette' }">
+        <li :class="{ active: activeOption === 'paquerette' }">
             <button 
                 type="button" 
                 @click="activate('paquerette')" 
@@ -76,7 +76,7 @@
                 </div>
             </button>
         </li>
-        <li :class="{ active: ligue === 'open' }">
+        <li :class="{ active: activeOption === 'open' }">
             <button 
                 type="button" 
                 @click="activate('open')" 
@@ -95,22 +95,33 @@
 <script>
 export default {
     name:"Ligue",
-    props: ['ligue'],
-    emits: ['update:ligue'],
-    // data() {
-    //   return {
-    //     activeOption: this.modelValue,
-    //   };
-    // },
+    props: ['modelValue'],
+    emits: ['update:modelValue'],
+    data() {
+      return {
+        activeOption: this.modelValue,
+      };
+    },
     // computed: {
     //   activeOption() {
-    //     return this.modelValue;
+    //     return this.activeOption;
     //   }
     // },
     methods: {
         activate(option) {
-            this.$emit('update:ligue', option)
+            this.activeOption = option;
+            this.$emit('update:modelValue', option);
         },
     },
 }
 </script>
+
+<style scoped>
+  .active {
+    border-color: #db0c14;
+  }
+
+  .active button {
+    color: #db0c14;
+  }
+</style>
