@@ -2,9 +2,9 @@
     <div class="container mx-auto">
         <form>
             <section
-                class="w-full my-10 pt-5 px-5 p-6 hover:shadow-lg hover:bg-lightgrey rounded-xl"
+                class="w-full mt-10 pt-5 px-5 p-6 hover:shadow-lg hover:bg-lightgrey rounded-xl"
             >
-                <h1 class="font-supercell text-lg text-gray-700 py5 text-rouge">
+                <h1 class="font-supercell text-2xl text-gray-700 py5 text-rouge">
                     Compte
                 </h1>
                 <h2
@@ -13,14 +13,13 @@
                     Pseudo
                 </h2>
                 <div class="container mx-auto">
-                    <select
+                    <input
                         class="mx-auto my-5 w-full border border-orange pl-3 py-3 shadow-sm rounded text-sm focus:outline-none focus:border-rouge text-orange"
                         v-model="pseudo"
-                    >
-                        <option v-for="item in liste" :key="item.id">
+                    />
+                    <!-- <option v-for="item in liste" :key="item.id">
                             {{ item.pseudo }}
-                        </option>
-                    </select>
+                        </option> -->
                 </div>
                 <div>
                     <div class="items-left justify-center w-full mb-12">
@@ -35,7 +34,7 @@
                                     id="toogleA"
                                     type="checkbox"
                                     class="sr-only"
-                                    v-model="newPseudo"
+                                    v-model="toggleNewPseudo"
                                 />
                                 <!-- line -->
                                 <div
@@ -52,40 +51,43 @@
                             </div>
                         </label>
                     </div>
-                </div>
-                <div v-if="newPseudo">
-                    <p
-                        class="font-supercell text-md text-gray-700 py5 mt-2 text-orange"
-                    >
-                        Ajouter mon pseudo
-                    </p>
-                    <input
-                        class="mx-auto my-5 w-full border border-orange dark:border-gray-700 pl-3 py-3 shadow-sm rounded text-sm focus:outline-none focus:border-orange text-orange bg-transparent dark:text-gray-100"
-                    />
-                </div>
-            </section>
-            <section
-                v-if="pseudo"
-                class="w-full my-10 pt-5 px-5 p-6 hover:shadow-lg hover:bg-lightgrey rounded-xl"
-            >
-                <h1 class="font-supercell text-lg text-gray-700 py5 text-rouge">
-                    Hdv
-                </h1>
-                <div class="container mx-auto">
-                    <div class="container mx-auto">
-                        <select
-                            @input="toggleInput"
-                            v-model="hdv"
-                            class="mx-auto my-5 w-full border border-orange dark:border-gray-700 pl-3 py-3 shadow-sm rounded text-sm focus:outline-none focus:border-orange text-orange bg-transparent dark:text-gray-100"
-                            required
+                    <div v-if="toggleNewPseudo">
+                        <p
+                            class="font-supercell text-md text-gray-700 py5 mt-2 text-orange"
                         >
-                            <option>Hdv 14</option>
-                            <option>Hdv 13</option>
-                            <option>Hdv 12</option>
-                            <option>Hdv 11</option>
-                            <option>Hdv 10</option>
-                            <option>Hdv 09</option>
-                        </select>
+                            Ajouter mon pseudo
+                        </p>
+                        <input
+                            v-model="newPseudo"
+                            class="mx-auto my-5 w-full border border-orange dark:border-gray-700 pl-3 py-3 shadow-sm rounded text-sm focus:outline-none focus:border-orange text-orange bg-transparent dark:text-gray-100"
+                        />
+                    </div>
+                </div>
+                <div
+                    v-if="pseudo || newPseudo"
+                    class="w-full mt-6 pt-5"
+                >
+                    <h1
+                        class="font-supercell text-md text-gray-700 text-orange"
+                    >
+                        Hdv
+                    </h1>
+                    <div class="container mx-auto">
+                        <div class="container mx-auto">
+                            <select
+                                @input="toggleInput"
+                                v-model="hdv"
+                                class="mx-auto mt-5 w-full border border-orange dark:border-gray-700 pl-3 py-3 shadow-sm rounded text-sm focus:outline-none focus:border-orange text-orange bg-transparent dark:text-gray-100"
+                                required
+                            >
+                                <option>Hdv 14</option>
+                                <option>Hdv 13</option>
+                                <option>Hdv 12</option>
+                                <option>Hdv 11</option>
+                                <option>Hdv 10</option>
+                                <option>Hdv 09</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -96,7 +98,7 @@
         <section
             class="w-full my-10 pt-5 px-5 p-6 hover:shadow-lg hover:bg-lightgrey rounded-xl"
         >
-            <h1 class="font-supercell text-lg mb-5 py5 text-rouge">
+            <h1 class="font-supercell text-lg mb-5 text-rouge">
                 Niveau de league souhaité
             </h1>
             <div class="w-full grid sm:grid-cols-1 md:grid-cols-2 gap-8">
@@ -217,11 +219,13 @@
                     value="-"
                     class="w-full rounded hover:bg-lightgrey focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none focus:bg-white col-span-2"
                 >
-                  <div class="shadow px-8 py-6 flex items-center justify-center">
-                    <p class="font-supercell text-orange text-2xl">
-                      Faites de moi ce que vous voulez
-                    </p>
-                  </div>
+                    <div
+                        class="shadow px-8 py-6 flex items-center justify-center"
+                    >
+                        <p class="font-supercell text-orange text-2xl">
+                            Faites de moi ce que vous voulez
+                        </p>
+                    </div>
                 </button>
             </div>
         </section>
@@ -239,30 +243,36 @@
 
         <div
             v-if="infoSubmit"
-            class="w-full my-10 py-5 px-5 bg-green-100 rounded-xl"
+            class="container mx-auto w-full my-10 py-5 px-5 bg-beige rounded-xl"
         >
-            <h2>Récap</h2>
-            <p>Hdv : {{ hdv }}</p>
-            <p>Pseudo : {{ pseudo }}</p>
-            <p>League choisie: {{ league }}</p>
+            <h2 class="font-supercell text-white text-3xl mb-10">Récap</h2>
+            <p class="font-supercell text-white text-2xl">
+                Pseudo : {{ pseudo }}
+            </p>
+            <p class="font-supercell text-white text-2xl">Hdv : {{ hdv }}</p>
+            <p class="font-supercell text-white text-2xl mb-6">
+                Ligue préférée : {{ league }}
+            </p>
+            <button
+                @click.prevent="addChoice"
+                value="-"
+                class="w-full group rounded border border-white hover:bg-white focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none focus:bg-white col-span-2"
+            >
+                <div
+                    class="w-full h-full shadow px-8 py-6 flex items-center justify-center"
+                >
+                    <p
+                        class="font-supercell text-white group-hover:text-beige focus:text-beige text-2xl"
+                    >
+                        Inscrire un autre compte
+                    </p>
+                </div>
+            </button>
         </div>
-
-        <!-- <section class="w-full py-5 bg-gray-50 rounded">
-                <h1 class="font-supercell text-lg text-gray-700 py5">
-                    Préférence
-                </h1>
-                <select>
-                    <option>Cactus</option>
-                    <option>Kipik</option>
-                    <option>Rose</option>
-                    <option>Pâquerette</option>
-                </select>
-            </section> -->
     </div>
 </template>
 
 <script>
-
 export default {
     name: 'Spreadsheet',
 
@@ -270,6 +280,7 @@ export default {
         return {
             pseudo: '',
             newPseudo: '',
+            toggleNewPseudo: '',
             hdv: '',
             liste: [], // Liste data from Google Sheet
             infoSubmit: false,
