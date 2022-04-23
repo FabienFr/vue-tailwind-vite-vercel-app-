@@ -6,3 +6,9 @@
   font-family: "supercell-magic-webfont";
   src: url("../fonts/supercell-magic-webfont.ttf");
 }
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
