@@ -22,7 +22,7 @@
                         </option> -->
                 </div>
                 <div>
-                    <div class="items-left justify-center w-full mb-12">
+                    <div class="items-left justify-center w-full mb-6">
                         <label
                             for="toogleA"
                             class="flex items-center cursor-pointer"
@@ -65,7 +65,7 @@
                 </div>
                 <div
                     v-if="pseudo || newPseudo"
-                    class="w-full mt-6 pt-5"
+                    class="w-full pt-2"
                 >
                     <h1
                         class="font-supercell text-md text-gray-700 text-orange"
@@ -243,7 +243,7 @@
 
         <div
             v-if="infoSubmit"
-            class="container mx-auto w-full my-10 py-5 px-5 bg-beige rounded-xl"
+            class="container mx-auto w-full my-10 py-5 px-5 bg-gradient-to-bl opacity-60 from-beige to-orange rounded-xl"
         >
             <h2 class="font-supercell text-white text-3xl mb-10">Récap</h2>
             <p class="font-supercell text-white text-2xl">
