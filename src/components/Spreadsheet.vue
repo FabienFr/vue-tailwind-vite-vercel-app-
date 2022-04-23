@@ -1,5 +1,5 @@
 <template>
-    <form action="https://submit-form.com/s4mPXLlR" method="POST" class="container mx-auto">
+    <form @submit.prevent="submitForm" class="container mx-auto">
         <section
             class="min-w-full mt-10 pt-5 px-5 p-6 hover:shadow-lg hover:bg-lightgrey rounded-xl"
         >
@@ -68,7 +68,10 @@
                     />
                 </div>
             </div>
-            <div v-if="pseudo || newPseudo" class="container mx-auto w-full pt-2">
+            <div
+                v-if="pseudo || newPseudo"
+                class="container mx-auto w-full pt-2"
+            >
                 <h1 class="font-supercell text-2xl text-gray-700 text-orange">
                     Hdv
                 </h1>
@@ -99,8 +102,10 @@
             <h1 class="font-supercell text-3xl mb-5 text-rouge">
                 Niveau de ligue souhaité
             </h1>
-            <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-8">
+            <Ligue v-model="ligue" />
+            <!-- <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-8">
                 <button
+                    type="button"
                     value="cactus"
                     name="cactus"
                     @click.prevent="addChoice"
@@ -130,6 +135,7 @@
                     </div>
                 </button>
                 <button
+                    type="button"
                     value="kipik"
                     name="kipik"
                     @click.prevent="addChoice"
@@ -159,6 +165,7 @@
                     </div>
                 </button>
                 <button
+                    type="button"
                     value="rose"
                     name="rose"
                     @click.prevent="addChoice"
@@ -188,6 +195,7 @@
                     </div>
                 </button>
                 <button
+                    type="button"
                     value="paquerette"
                     name="paquerette"
                     @click.prevent="addChoice"
@@ -217,6 +225,7 @@
                     </div>
                 </button>
                 <button
+                    type="button"
                     value="-"
                     name="-"
                     @click.prevent="addChoice"
@@ -230,14 +239,13 @@
                         </p>
                     </div>
                 </button>
-            </div>
+            </div> -->
         </section>
         <section v-if="hdv" class="min-w-full">
             <div class="w-full my-10 py-5 px-5 bg-gray-50 rounded-xl">
                 <button
                     type="submit"
                     v-if="!infoSubmit"
-                    @click.prevent="formSubmit"
                     class="w-full border border-beige hover:bg-beige transition duration-150 ease-in-out focus:ring-orange rounded-lg font-supercell text-beige hover:text-white px-8 py-4 text-lg focus:outline-none"
                 >
                     Envoyer
@@ -272,8 +280,17 @@
 </template>
 
 <script>
+
+import Ligue from './Ligue.vue'
+
+const FORMSPARK_ACTION_URL = 'https://submit-form.com/s4mPXLlR'
+
 export default {
     name: 'Spreadsheet',
+
+    components: {
+        Ligue
+    },
 
     data() {
         return {
@@ -284,7 +301,7 @@ export default {
             liste: [], // Liste data from Google Sheet
             infoSubmit: false,
             newForm: '',
-            ligue: '',
+            ligue: null,
         }
     },
     // mounted() {
@@ -302,17 +319,35 @@ export default {
     //         .then((response) => (this.liste = response.data.results))
     // },
     methods: {
-        addChoice() {
-            this.ligue = this.value
-            console.log(ligue)
-        },
-        formSubmit() {
-            this.infoSubmit = true
-        },
         toggleInput() {
             this.infoSubmit = false
         },
         newForm() {},
+        async submitForm() {
+            await fetch(FORMSPARK_ACTION_URL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    Accept: 'application/json',
+                },
+                body: JSON.stringify({
+                    pseudo: this.pseudo,
+                    newPseudo: this.newPseudo,
+                    hdv: this.hdv,
+                    ligue: this.ligue,
+                }),
+            })
+            alert('Form submitted')
+            console.log('Pseudo : ' + this.pseudo);
+            this.pseudo = '';
+            console.log('NewPseudo : ' + this.newPseudo);
+            this.newPseudo = '';
+            console.log('Hdv : ' + this.hdv);
+            this.hdv = '';
+            console.log('Choix de ligue : ' + this.ligue);
+            this.ligue = '';
+        },
+
     },
 }
 </script>
