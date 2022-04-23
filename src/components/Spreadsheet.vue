@@ -1,5 +1,5 @@
 <template>
-    <form class="container mx-auto">
+    <form action="https://submit-form.com/s4mPXLlR" method="POST" class="container mx-auto">
         <section
             class="min-w-full mt-10 pt-5 px-5 p-6 hover:shadow-lg hover:bg-lightgrey rounded-xl"
         >
@@ -13,6 +13,8 @@
             </h2>
             <div class="container mx-auto">
                 <input
+                    type="text"
+                    name="pseudo"
                     class="mx-auto my-5 w-full border border-orange pl-3 py-3 shadow-sm rounded text-sm focus:outline-none focus:border-rouge text-orange"
                     v-model="pseudo"
                 />
@@ -20,7 +22,7 @@
                             {{ item.pseudo }}
                         </option> -->
             </div>
-            <div>
+            <div class="container mx-auto">
                 <div class="items-left justify-center w-full mb-6">
                     <label
                         for="toogleA"
@@ -59,18 +61,21 @@
                         Ajouter mon pseudo
                     </p>
                     <input
+                        type="text"
+                        name="newPseudo"
                         v-model="newPseudo"
                         class="mx-auto my-5 w-full border border-orange dark:border-gray-700 pl-3 py-3 shadow-sm rounded text-sm focus:outline-none focus:border-orange text-orange bg-transparent dark:text-gray-100"
                     />
                 </div>
             </div>
-            <div v-if="pseudo || newPseudo" class="w-full pt-2">
+            <div v-if="pseudo || newPseudo" class="container mx-auto w-full pt-2">
                 <h1 class="font-supercell text-2xl text-gray-700 text-orange">
                     Hdv
                 </h1>
                 <div class="container mx-auto">
                     <div class="container mx-auto">
                         <select
+                            name="hdv"
                             @input="toggleInput"
                             v-model="hdv"
                             class="mx-auto mt-5 w-full border border-orange dark:border-gray-700 pl-3 py-3 shadow-sm rounded text-sm focus:outline-none focus:border-orange text-orange bg-transparent dark:text-gray-100"
@@ -97,6 +102,7 @@
             <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-8">
                 <button
                     value="cactus"
+                    name="cactus"
                     @click.prevent="addChoice"
                     aria-label="card 1"
                     class="rounded hover:bg-lightgrey focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none focus:bg-white"
@@ -125,6 +131,7 @@
                 </button>
                 <button
                     value="kipik"
+                    name="kipik"
                     @click.prevent="addChoice"
                     aria-label="card 2"
                     class="rounded hover:bg-lightgrey focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none focus:bg-white"
@@ -153,6 +160,7 @@
                 </button>
                 <button
                     value="rose"
+                    name="rose"
                     @click.prevent="addChoice"
                     aria-label="card 3"
                     class="rounded hover:bg-lightgrey focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none focus:bg-white"
@@ -180,8 +188,9 @@
                     </div>
                 </button>
                 <button
-                    @click.prevent="addChoice"
                     value="paquerette"
+                    name="paquerette"
+                    @click.prevent="addChoice"
                     aria-label="card 4"
                     class="rounded hover:bg-lightgrey focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none focus:bg-white"
                 >
@@ -208,8 +217,9 @@
                     </div>
                 </button>
                 <button
-                    @click.prevent="addChoice"
                     value="-"
+                    name="-"
+                    @click.prevent="addChoice"
                     class="w-full rounded hover:bg-lightgrey focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none focus:bg-white col-span-2"
                 >
                     <div
@@ -225,10 +235,10 @@
         <section v-if="hdv" class="min-w-full">
             <div class="w-full my-10 py-5 px-5 bg-gray-50 rounded-xl">
                 <button
+                    type="submit"
                     v-if="!infoSubmit"
                     @click.prevent="formSubmit"
                     class="w-full border border-beige hover:bg-beige transition duration-150 ease-in-out focus:ring-orange rounded-lg font-supercell text-beige hover:text-white px-8 py-4 text-lg focus:outline-none"
-                    type="submit"
                 >
                     Envoyer
                 </button>
