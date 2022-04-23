@@ -22,31 +22,26 @@
                             {{ item.pseudo }}
                         </option> -->
             </div>
-            <div class="container mx-auto">
+            <!-- <div class="container mx-auto">
                 <div class="items-left justify-center w-full mb-6">
                     <label
                         for="toogleA"
                         class="flex items-center cursor-pointer"
                     >
-                        <!-- toggle -->
                         <div class="relative">
-                            <!-- input -->
                             <input
                                 id="toogleA"
                                 type="checkbox"
                                 class="sr-only"
                                 v-model="toggleNewPseudo"
                             />
-                            <!-- line -->
                             <div
                                 class="w-10 h-4 bg-lightgrey rounded-full shadow-inner"
                             ></div>
-                            <!-- dot -->
                             <div
                                 class="dot absolute w-6 h-6 bg-beige rounded-full shadow -left-1 -top-1 transition"
                             ></div>
                         </div>
-                        <!-- label -->
                         <div
                             class="ml-3 text-beige text-xl tracking-normal font-bold"
                         >
@@ -67,7 +62,7 @@
                         class="mx-auto my-5 w-full border border-orange dark:border-gray-700 pl-3 py-3 shadow-sm rounded text-sm focus:outline-none focus:border-orange text-orange bg-transparent dark:text-gray-100"
                     />
                 </div>
-            </div>
+            </div> -->
             <div
                 v-if="pseudo || newPseudo"
                 class="container mx-auto w-full pt-2"
