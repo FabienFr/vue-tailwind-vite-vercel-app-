@@ -127,11 +127,11 @@ export default {
 </script>
 
 <style scoped>
-  .active {
+  /* .active {
     border-color: #db0c14;
   }
 
   .active button {
     color: #db0c14;
-  }
+  } */
 </style>
