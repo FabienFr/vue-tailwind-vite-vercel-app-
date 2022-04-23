@@ -38,11 +38,11 @@
                                 />
                                 <!-- line -->
                                 <div
-                                    class="w-10 h-4 bg-gray-400 rounded-full shadow-inner"
+                                    class="w-10 h-4 bg-lightgrey rounded-full shadow-inner"
                                 ></div>
                                 <!-- dot -->
                                 <div
-                                    class="dot absolute w-6 h-6 bg-white rounded-full shadow -left-1 -top-1 transition"
+                                    class="dot absolute w-6 h-6 bg-beige rounded-full shadow -left-1 -top-1 transition"
                                 ></div>
                             </div>
                             <!-- label -->
@@ -98,8 +98,8 @@
         <section
             class="w-full my-10 pt-5 px-5 p-6 hover:shadow-lg hover:bg-lightgrey rounded-xl"
         >
-            <h1 class="font-supercell text-lg mb-5 text-rouge">
-                Niveau de league souhaité
+            <h1 class="font-supercell text-2xl mb-5 text-rouge">
+                Niveau de ligue souhaité
             </h1>
             <div class="w-full grid sm:grid-cols-1 md:grid-cols-2 gap-8">
                 <button
@@ -120,7 +120,7 @@
                             <p
                                 class="text-beige text-xl tracking-normal font-bold leading-5 mt-3"
                             >
-                                full hdv14
+                                full hdv 14
                             </p>
                             <p
                                 class="text-beige text-lg tracking-normal font-supercell font-normal leading-5 mt-3"
@@ -223,7 +223,7 @@
                         class="shadow px-8 py-6 flex items-center justify-center"
                     >
                         <p class="font-supercell text-orange text-2xl">
-                            Faites de moi ce que vous voulez
+                            Faites de moi ce que vous voulez !
                         </p>
                     </div>
                 </button>
@@ -234,7 +234,7 @@
             <button
                 v-if="!infoSubmit"
                 @click.prevent="formSubmit"
-                class="w-full border border-beige hover:bg-orange transition duration-150 ease-in-out focus:ring-orange rounded-lg text-supercell text-orange hover:text-white px-8 py-4 text-lg focus:outline-none"
+                class="w-full border border-beige hover:bg-beige transition duration-150 ease-in-out focus:ring-orange rounded-lg font-supercell text-beige hover:text-white px-8 py-4 text-lg focus:outline-none"
                 type="submit"
             >
                 Envoyer
@@ -254,15 +254,15 @@
                 Ligue préférée : {{ league }}
             </p>
             <button
-                @click.prevent="addChoice"
+                @click.prevent="newForm"
                 value="-"
-                class="w-full group rounded border border-white hover:bg-white focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none focus:bg-white col-span-2"
+                class="w-full group rounded border border-white hover:bg-white focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none focus:bg-white col-span-2 group-focus:text-beige"
             >
                 <div
                     class="w-full h-full shadow px-8 py-6 flex items-center justify-center"
                 >
                     <p
-                        class="font-supercell text-white group-hover:text-beige focus:text-beige text-2xl"
+                        class="font-supercell text-white  text-2xl"
                     >
                         Inscrire un autre compte
                     </p>
@@ -284,7 +284,7 @@ export default {
             hdv: '',
             liste: [], // Liste data from Google Sheet
             infoSubmit: false,
-            newUsername: '',
+            newForm: '',
             ligue: '',
         }
     },
@@ -313,6 +313,9 @@ export default {
         toggleInput() {
             this.infoSubmit = false
         },
+        newForm() {
+          
+        }
     },
 }
 </script>

@@ -1,8 +1,8 @@
 <template>
     <div class="w-full max-w-3xl mx-auto">
         <Header 
-            title="Inscription aux Leagues"           
-            subtitle="Clans Tempête, Sympathique, Tinkmaster4, fils d'Arès"
+            title="Inscription aux Ligues"           
+            subtitle="Clans Tempête, Sympathique, Tinkmaster4, Fils d'Arès"
             period="Mai 2022"
         />
         <Spreadsheet />
