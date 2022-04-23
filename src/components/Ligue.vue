@@ -5,9 +5,9 @@
                 type="button" 
                 ontouchstart=""
                 style="-webkit-tap-highlight-color: rgba(0,0,0,0);"
-                @click="activate('Cactus')" 
-                class="mx-auto w-full rounded hover:bg-lightgrey focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none focus:bg-orange focus:bg-opacity-20 active:bg-rouge"
-            >
+                @click="activate('Cactus'), activation()" 
+                :class="{ 'focus:bg-orange focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none focus:bg-opacity-50 active:bg-rouge': isActive  }"
+                class="mx-auto w-full rounded hover:bg-lightgrey "            >
                 <div class="shadow px-8 py-6 flex flex-col items-center justify-center">
                     <h3 class="mb-1 leading-5 text-orange font-supercell font-bold text-2xl">
                         Cactus
@@ -26,12 +26,12 @@
                 type="button"
                 ontouchstart="" 
                 style="-webkit-tap-highlight-color: rgba(0,0,0,0);"
-                @click="activate('Kipik')" 
-                class="mx-auto w-full rounded hover:bg-lightgrey focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none focus:bg-orange focus:bg-opacity-20 active:bg-rouge"
-            >
+                @click="activate('Kipik'), activation()" 
+                :class="{ 'focus:bg-orange focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none focus:bg-opacity-50 active:bg-rouge': isActive  }"
+                class="mx-auto w-full rounded hover:bg-lightgrey "            >
                 <div class="shadow px-8 py-6 flex flex-col items-center justify-center">
                     <h3 class="mb-1 leading-5 text-orange font-supercell font-bold text-2xl">
-                        Kipik
+                      Kipik
                     </h3>
                     <p class="text-beige text-xl tracking-normal font-bold leading-5 mt-3">
                         full hdv 14
@@ -47,9 +47,9 @@
                 type="button" 
                 ontouchstart=""
                 style="-webkit-tap-highlight-color: rgba(0,0,0,0);"
-                @click="activate('Rose')" 
-                class="mx-auto w-full rounded hover:bg-lightgrey focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none focus:bg-orange focus:bg-opacity-20 active:bg-rouge"
-            >
+                @click="activate('Rose', activation())" 
+                :class="{ 'focus:bg-orange focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none focus:bg-opacity-50 active:bg-rouge': isActive  }"
+                class="mx-auto w-full rounded hover:bg-lightgrey "            >
                 <div class="shadow px-8 py-6 flex flex-col items-center justify-center">
                     <h3 class="mb-1 leading-5 text-orange focus:text-rouge focus:opacity-100 font-supercell font-bold text-2xl">
                         Rose
@@ -68,8 +68,9 @@
                 type="button" 
                 ontouchstart=""
                 style="-webkit-tap-highlight-color: rgba(0,0,0,0);"
-                @click="activate('Paquerette')" 
-                class="mx-auto w-full rounded hover:bg-lightgrey focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none focus:bg-orange focus:bg-opacity-20 active:bg-rouge"
+                @click="activate('Paquerette'), activation()" 
+                :class="{ 'focus:bg-orange focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none focus:bg-opacity-50 active:bg-rouge': isActive  }"
+                class="mx-auto w-full rounded hover:bg-lightgrey "
             >
                 <div class="shadow px-8 py-6 flex flex-col items-center justify-center">
                     <h3 class="mb-1 leading-5 text-orange font-supercell font-bold text-2xl">
@@ -89,8 +90,9 @@
                 type="button" 
                 ontouchstart=""
                 style="-webkit-tap-highlight-color: rgba(0,0,0,0);"
-                @click="activate('-')" 
-                class="w-full rounded hover:bg-lightgrey focus:ring-3 focus:ring-offset-2 focus:ring-rouge focus:outline-none focus:bg-orange focus:bg-opacity-20 active:bg-rouge"
+                @click="activate('-'), activation()" 
+                :class="{ 'focus:bg-orange focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none focus:bg-opacity-50 active:bg-rouge': isActive  }"
+                class="mx-auto w-full rounded hover:bg-lightgrey "
             >
                 <div class="shadow px-8 py-6 flex items-center justify-center">
                     <p class="font-supercell text-orange text-2xl">
@@ -110,6 +112,7 @@ export default {
     data() {
       return {
         activeOption: this.modelValue,
+        isActive: false
       };
     },
     // computed: {
@@ -122,6 +125,10 @@ export default {
             this.activeOption = option;
             this.$emit('update:modelValue', option);
         },
+        activation() {
+          this.isActive = !this.isActive
+          console.log(this.isActive)
+        }
     },
 }
 </script>
