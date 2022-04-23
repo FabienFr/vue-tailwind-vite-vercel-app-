@@ -4,11 +4,11 @@
             <section
                 class="w-full mt-10 pt-5 px-5 p-6 hover:shadow-lg hover:bg-lightgrey rounded-xl"
             >
-                <h1 class="font-supercell text-2xl text-gray-700 py5 text-rouge">
+                <h1 class="font-supercell text-3xl text-gray-700 py5 text-rouge">
                     Compte
                 </h1>
                 <h2
-                    class="font-supercell text-md text-gray-700 py5 mt-6 text-orange"
+                    class="font-supercell text-2xl text-gray-700 py5 mt-6 text-orange"
                 >
                     Pseudo
                 </h2>
@@ -46,14 +46,14 @@
                                 ></div>
                             </div>
                             <!-- label -->
-                            <div class="ml-3 text-orange font-medium">
+                            <div class="ml-3 text-beige text-xl tracking-normal font-bold">
                                 Mon pseudo n'est pas dans la liste
                             </div>
                         </label>
                     </div>
                     <div v-if="toggleNewPseudo">
                         <p
-                            class="font-supercell text-md text-gray-700 py5 mt-2 text-orange"
+                            class="font-supercell  text-2xl text-gray-700 py5 mt-2 text-orange"
                         >
                             Ajouter mon pseudo
                         </p>
@@ -68,7 +68,7 @@
                     class="w-full pt-2"
                 >
                     <h1
-                        class="font-supercell text-md text-gray-700 text-orange"
+                        class="font-supercell text-2xl text-gray-700 text-orange"
                     >
                         Hdv
                     </h1>
@@ -98,7 +98,7 @@
         <section
             class="w-full my-10 pt-5 px-5 p-6 hover:shadow-lg hover:bg-lightgrey rounded-xl"
         >
-            <h1 class="font-supercell text-2xl mb-5 text-rouge">
+            <h1 class="font-supercell text-3xl mb-5 text-rouge">
                 Niveau de ligue souhaité
             </h1>
             <div class="w-full grid sm:grid-cols-1 md:grid-cols-2 gap-8">
@@ -247,7 +247,7 @@
         >
             <h2 class="font-supercell text-white text-3xl mb-10">Récap</h2>
             <p class="font-supercell text-white text-2xl">
-                Pseudo : {{ pseudo }}
+                Pseudo : {{ pseudo || newPseudo }}
             </p>
             <p class="font-supercell text-white text-2xl">Hdv : {{ hdv }}</p>
             <p class="font-supercell text-white text-2xl mb-6">
@@ -256,17 +256,13 @@
             <button
                 @click.prevent="newForm"
                 value="-"
-                class="w-full group rounded border border-white hover:bg-white focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none focus:bg-white col-span-2 group-focus:text-beige"
+                class="w-full border border-beige hover:bg-beige transition duration-150 ease-in-out focus:ring-orange rounded-lg font-supercell text-beige hover:text-white px-8 py-4 text-lg focus:outline-none"
             >
-                <div
-                    class="w-full h-full shadow px-8 py-6 flex items-center justify-center"
-                >
-                    <p
-                        class="font-supercell text-white  text-2xl"
-                    >
-                        Inscrire un autre compte
-                    </p>
-                </div>
+              <p
+                  class="font-supercell text-white  text-2xl"
+              >
+                  Inscrire un autre compte
+              </p>
             </button>
         </div>
     </div>
