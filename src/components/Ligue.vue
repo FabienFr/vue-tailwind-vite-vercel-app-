@@ -5,17 +5,17 @@
                 type="button" 
                 ontouchstart=""
                 style="-webkit-tap-highlight-color: rgba(0,0,0,0);"
-                @click="activate('Cactus'), activation()" 
-                :class="{ 'focus:bg-orange focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none focus:bg-opacity-50 active:bg-rouge': isActive  }"
-                class="mx-auto w-full rounded hover:bg-lightgrey "            >
+                @click="activate('Cactus'), cactus()" 
+                :class="{ 'bg-beige': cactusActive }"
+                class="mx-auto w-full rounded focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none"            >
                 <div class="shadow px-8 py-6 flex flex-col items-center justify-center">
-                    <h3 class="mb-1 leading-5 text-orange font-supercell font-bold text-2xl">
+                    <h3 class="mb-1 leading-5 text-orange font-supercell font-bold text-2xl" :class="{ 'text-rouge': cactusActive }">
                         Cactus
                     </h3>
-                    <p class="text-beige text-xl tracking-normal font-bold leading-5 mt-3">
+                    <p class="text-beige text-xl tracking-normal font-bold leading-5 mt-3" :class="{ 'text-white': cactusActive }">
                         full hdv 14
                     </p>
-                    <p class="text-beige text-lg tracking-normal font-supercell font-normal leading-5 mt-3">
+                    <p class="text-beige text-lg tracking-normal font-supercell font-normal leading-5 mt-3" :class="{ 'text-white': cactusActive }">
                         Master 1
                     </p>
                 </div>
@@ -26,17 +26,17 @@
                 type="button"
                 ontouchstart="" 
                 style="-webkit-tap-highlight-color: rgba(0,0,0,0);"
-                @click="activate('Kipik'), activation()" 
-                :class="{ 'focus:bg-orange focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none focus:bg-opacity-50 active:bg-rouge': isActive  }"
-                class="mx-auto w-full rounded hover:bg-lightgrey "            >
+                @click="activate('Kipik'), kipik()" 
+                :class="{ 'bg-beige': kipikActive }"
+                class="mx-auto w-full rounded focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none"            >
                 <div class="shadow px-8 py-6 flex flex-col items-center justify-center">
-                    <h3 class="mb-1 leading-5 text-orange font-supercell font-bold text-2xl">
+                    <h3 class="mb-1 leading-5 text-orange font-supercell font-bold text-2xl" :class="{ 'text-rouge': kipikActive }">
                       Kipik
                     </h3>
-                    <p class="text-beige text-xl tracking-normal font-bold leading-5 mt-3">
+                    <p class="text-beige text-xl tracking-normal font-bold leading-5 mt-3" :class="{ 'text-white': kipikActive }">
                         full hdv 14
                     </p>
-                    <p class="text-beige text-lg tracking-normal font-supercell font-normal leading-5 mt-3">
+                    <p class="text-beige text-lg tracking-normal font-supercell font-normal leading-5 mt-3" :class="{ 'text-white': kipikActive }">
                         Master 1
                     </p>
                 </div>
@@ -47,17 +47,17 @@
                 type="button" 
                 ontouchstart=""
                 style="-webkit-tap-highlight-color: rgba(0,0,0,0);"
-                @click="activate('Rose', activation())" 
-                :class="{ 'focus:bg-orange focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none focus:bg-opacity-50 active:bg-rouge': isActive  }"
-                class="mx-auto w-full rounded hover:bg-lightgrey "            >
+                @click="activate('Rose', rose())" 
+                :class="{ 'bg-beige': roseActive }"
+                class="mx-auto w-full rounded focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none"            >
                 <div class="shadow px-8 py-6 flex flex-col items-center justify-center">
-                    <h3 class="mb-1 leading-5 text-orange focus:text-rouge focus:opacity-100 font-supercell font-bold text-2xl">
+                    <h3 class="mb-1 leading-5 text-orange focus:opacity-100 font-supercell font-bold text-2xl" :class="{ 'text-rouge': roseActive }">
                         Rose
                     </h3>
-                    <p class="text-beige text-xl tracking-normal font-bold leading-5 mt-3">
+                    <p class="text-beige text-xl tracking-normal font-bold leading-5 mt-3" :class="{ 'text-white': roseActive }">
                         full hdv 14
                     </p>
-                    <p class="text-beige text-lg tracking-normal font-supercell font-normal leading-5 mt-3">
+                    <p class="text-beige text-lg tracking-normal font-supercell font-normal leading-5 mt-3" :class="{ 'text-white': roseActive }">
                         Master 1
                     </p>
                 </div>
@@ -68,34 +68,34 @@
                 type="button" 
                 ontouchstart=""
                 style="-webkit-tap-highlight-color: rgba(0,0,0,0);"
-                @click="activate('Paquerette'), activation()" 
-                :class="{ 'focus:bg-orange focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none focus:bg-opacity-50 active:bg-rouge': isActive  }"
-                class="mx-auto w-full rounded hover:bg-lightgrey "
+                @click="activate('Paquerette'), paquerette()" 
+                :class="{ 'bg-beige': paqueretteActive }"
+                class="mx-auto w-full rounded focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none"
             >
                 <div class="shadow px-8 py-6 flex flex-col items-center justify-center">
-                    <h3 class="mb-1 leading-5 text-orange font-supercell font-bold text-2xl">
+                    <h3 class="mb-1 leading-5 text-orange font-supercell font-bold text-2xl" :class="{ 'text-rouge': paqueretteActive }">
                         Pâquerette
                     </h3>
-                    <p class="text-beige text-xl tracking-normal font-bold leading-5 mt-3">
+                    <p class="text-beige text-xl tracking-normal font-bold leading-5 mt-3" :class="{ 'text-white': paqueretteActive }">
                         full hdv 14
                     </p>
-                    <p class="text-beige text-lg tracking-normal font-supercell font-normal leading-5 mt-3">
+                    <p class="text-beige text-lg tracking-normal font-supercell font-normal leading-5 mt-3" :class="{ 'text-white': paqueretteActive }">
                         Master 1
                     </p>
                 </div>
             </button>
         </li>
-        <li :class="{ active: activeOption === '-' }">
+        <li class="col-span-2 " :class="{ active: activeOption === '-' }">
             <button 
                 type="button" 
                 ontouchstart=""
                 style="-webkit-tap-highlight-color: rgba(0,0,0,0);"
-                @click="activate('-'), activation()" 
-                :class="{ 'focus:bg-orange focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none focus:bg-opacity-50 active:bg-rouge': isActive  }"
-                class="mx-auto w-full rounded hover:bg-lightgrey "
+                @click="activate('-'), open()" 
+                :class="{ 'bg-beige': openActive }"
+                class="mx-auto w-full rounded focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none"
             >
                 <div class="shadow px-8 py-6 flex items-center justify-center">
-                    <p class="font-supercell text-orange text-2xl">
+                    <p class="font-supercell text-orange text-2xl" :class="{ 'text-rouge': openActive }">
                         Faites de moi ce que vous voulez !
                     </p>
                 </div>
@@ -112,7 +112,11 @@ export default {
     data() {
       return {
         activeOption: this.modelValue,
-        isActive: false
+        cactusActive: false,
+        kipikActive: false,
+        roseActive: false,
+        paqueretteActive: false,
+        openActive: false,
       };
     },
     // computed: {
@@ -125,10 +129,29 @@ export default {
             this.activeOption = option;
             this.$emit('update:modelValue', option);
         },
-        activation() {
-          this.isActive = !this.isActive
-          console.log(this.isActive)
+        cactus() {
+          this.cactusActive = !this.cactusActive
+          console.log(this.cactusActive)
+        },
+        kipik() {
+          this.kipikActive = !this.kipikActive
+          console.log(this.kipikActive)
+        },
+        rose() {
+          this.roseActive = !this.roseActive
+          console.log(this.roseActive)
+        },
+        paquerette() {
+          this.paqueretteActive = !this.paqueretteActive
+          console.log(this.paqueretteActive)
+        },
+        open() {
+          this.openActive = !this.openActive
+          console.log(this.openActive)
         }
+
+
+
     },
 }
 </script>
