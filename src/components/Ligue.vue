@@ -3,6 +3,8 @@
         <li :class="{ active: activeOption === 'Cactus' }">
             <button 
                 type="button" 
+                ontouchstart=""
+                style="-webkit-tap-highlight-color: rgba(0,0,0,0);"
                 @click="activate('Cactus')" 
                 class="mx-auto w-full rounded hover:bg-lightgrey focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none focus:bg-orange focus:bg-opacity-20 active:bg-rouge"
             >
@@ -21,7 +23,9 @@
         </li>
         <li :class="{ active: activeOption === 'Kipik' }">
             <button 
-                type="button" 
+                type="button"
+                ontouchstart="" 
+                style="-webkit-tap-highlight-color: rgba(0,0,0,0);"
                 @click="activate('Kipik')" 
                 class="mx-auto w-full rounded hover:bg-lightgrey focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none focus:bg-orange focus:bg-opacity-20 active:bg-rouge"
             >
@@ -41,6 +45,8 @@
         <li :class="{ active: activeOption === 'Rose' }">
             <button 
                 type="button" 
+                ontouchstart=""
+                style="-webkit-tap-highlight-color: rgba(0,0,0,0);"
                 @click="activate('Rose')" 
                 class="mx-auto w-full rounded hover:bg-lightgrey focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none focus:bg-orange focus:bg-opacity-20 active:bg-rouge"
             >
@@ -60,6 +66,8 @@
         <li :class="{ active: activeOption === 'Paquerette' }">
             <button 
                 type="button" 
+                ontouchstart=""
+                style="-webkit-tap-highlight-color: rgba(0,0,0,0);"
                 @click="activate('Paquerette')" 
                 class="mx-auto w-full rounded hover:bg-lightgrey focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none focus:bg-orange focus:bg-opacity-20 active:bg-rouge"
             >
@@ -79,6 +87,8 @@
         <li :class="{ active: activeOption === '-' }">
             <button 
                 type="button" 
+                ontouchstart=""
+                style="-webkit-tap-highlight-color: rgba(0,0,0,0);"
                 @click="activate('-')" 
                 class="w-full rounded hover:bg-lightgrey focus:ring-3 focus:ring-offset-2 focus:ring-rouge focus:outline-none focus:bg-orange focus:bg-opacity-20 active:bg-rouge"
             >
