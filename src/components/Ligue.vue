@@ -3,8 +3,6 @@
         <li :class="{ active: activeOption === 'Cactus' }">
             <button 
                 type="button" 
-                ontouchstart=""
-                style="-webkit-tap-highlight-color: rgba(0,0,0,0);"
                 @click="activate('Cactus'), cactus()" 
                 :class="{ 'bg-beige': cactusActive }"
                 class="mx-auto w-full rounded focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none"            >
@@ -24,8 +22,6 @@
         <li :class="{ active: activeOption === 'Kipik' }">
             <button 
                 type="button"
-                ontouchstart="" 
-                style="-webkit-tap-highlight-color: rgba(0,0,0,0);"
                 @click="activate('Kipik'), kipik()" 
                 :class="{ 'bg-beige': kipikActive }"
                 class="mx-auto w-full rounded focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none"            >
@@ -45,8 +41,6 @@
         <li :class="{ active: activeOption === 'Rose' }">
             <button 
                 type="button" 
-                ontouchstart=""
-                style="-webkit-tap-highlight-color: rgba(0,0,0,0);"
                 @click="activate('Rose', rose())" 
                 :class="{ 'bg-beige': roseActive }"
                 class="mx-auto w-full rounded focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none"            >
@@ -66,8 +60,6 @@
         <li :class="{ active: activeOption === 'Paquerette' }">
             <button 
                 type="button" 
-                ontouchstart=""
-                style="-webkit-tap-highlight-color: rgba(0,0,0,0);"
                 @click="activate('Paquerette'), paquerette()" 
                 :class="{ 'bg-beige': paqueretteActive }"
                 class="mx-auto w-full rounded focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none"
@@ -88,8 +80,6 @@
         <li :class="{ active: activeOption === '-' }">
             <button 
                 type="button" 
-                ontouchstart=""
-                style="-webkit-tap-highlight-color: rgba(0,0,0,0);"
                 @click="activate('-'), open()" 
                 :class="{ 'bg-beige': openActive }"
                 class="mx-auto w-full rounded focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none"

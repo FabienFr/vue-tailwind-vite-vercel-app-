@@ -91,6 +91,7 @@
             </div>
         </section>
         <section
+            id="step2"
             v-if="hdv"
             class="min-w-full my-10 pt-5 px-5 p-6 hover:shadow-lg hover:bg-lightgrey rounded-xl"
         >
@@ -107,30 +108,6 @@
                     class="w-full border border-beige hover:bg-beige transition duration-150 ease-in-out focus:ring-orange rounded-lg font-supercell text-beige hover:text-white px-8 py-4 text-lg focus:outline-none"
                 >
                     Envoyer
-                </button>
-            </div>
-            <div
-                v-if="infoSubmit"
-                class="container mx-auto w-full my-10 py-5 px-5 bg-gradient-to-bl opacity-60 from-beige to-orange rounded-xl"
-            >
-                <h2 class="font-supercell text-white text-3xl mb-10">Récap</h2>
-                <p class="font-supercell text-white text-2xl">
-                    Pseudo : {{ pseudo || newPseudo }}
-                </p>
-                <p class="font-supercell text-white text-2xl">
-                    Hdv : {{ hdv }}
-                </p>
-                <p class="font-supercell text-white text-2xl mb-6">
-                    Ligue préférée : {{ ligue }}
-                </p>
-                <button
-                    @click.prevent="newForm"
-                    value="-"
-                    class="w-full border border-beige hover:bg-beige transition duration-150 ease-in-out focus:ring-orange rounded-lg font-supercell text-beige hover:text-white px-8 py-4 text-lg focus:outline-none"
-                >
-                    <p class="font-supercell text-white text-2xl">
-                        Inscrire un autre compte
-                    </p>
                 </button>
             </div>
         </section>
@@ -180,7 +157,6 @@ export default {
         toggleInput() {
             this.infoSubmit = false
         },
-        newForm() {},
         async submitForm() {
             await fetch(FORMSPARK_ACTION_URL, {
                 method: 'POST',
@@ -195,7 +171,7 @@ export default {
                     ligue: this.ligue,
                 }),
             })
-            alert('Form submitted')
+            alert('Vous préférez jouer en ligue ' + this.ligue + ' avec le pseudo ' + this.pseudo + '.' + '\n' + 'Merci pour l\'info !' + '\n' + 'Vous pouvez remplir un nouveau formulaire au besoin...' )
             console.log('Pseudo : ' + this.pseudo);
             this.pseudo = '';
             console.log('NewPseudo : ' + this.newPseudo);
