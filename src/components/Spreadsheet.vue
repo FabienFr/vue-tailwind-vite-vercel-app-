@@ -63,10 +63,7 @@
                     />
                 </div>
             </div> -->
-            <div
-                v-if="pseudo || newPseudo"
-                class="container mx-auto w-full pt-2"
-            >
+            <div class="container mx-auto w-full pt-2">
                 <h1 class="font-supercell text-xl md:text-2xl text-gray-700 text-orange">
                     Hdv
                 </h1>
@@ -118,7 +115,7 @@
 
 import Ligue from './Ligue.vue'
 
-const FORMSPARK_ACTION_URL = 'https://submit-form.com/s4mPXLlR'
+const FORMSPARK_ACTION_URL = 'https://submit-form.com/m1p9xjlp'
 
 export default {
     name: 'Spreadsheet',

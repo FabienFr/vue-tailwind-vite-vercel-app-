@@ -27,7 +27,7 @@
                 class="mx-auto w-full rounded focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none"            >
                 <div class="shadow px-8 py-6 flex flex-col items-center justify-center">
                     <h3 class="mb-1 leading-5 text-orange font-supercell font-bold text-xl md:text-2xl">
-                      Kipik
+                        Kipik
                     </h3>
                     <p class="text-beige text-lg md:text-xl tracking-normal font-bold leading-5 mt-3" :class="{ 'text-white': kipikActive }">
                         full hdv 14
