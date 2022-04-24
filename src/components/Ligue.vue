@@ -9,7 +9,7 @@
                 :class="{ 'bg-beige': cactusActive }"
                 class="mx-auto w-full rounded focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none"            >
                 <div class="shadow px-8 py-6 flex flex-col items-center justify-center">
-                    <h3 class="mb-1 leading-5 text-orange font-supercell font-bold text-2xl" :class="{ 'text-rouge': cactusActive }">
+                    <h3 class="mb-1 leading-5 text-orange font-supercell font-bold text-2xl">
                         Cactus
                     </h3>
                     <p class="text-beige text-xl tracking-normal font-bold leading-5 mt-3" :class="{ 'text-white': cactusActive }">
@@ -30,7 +30,7 @@
                 :class="{ 'bg-beige': kipikActive }"
                 class="mx-auto w-full rounded focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none"            >
                 <div class="shadow px-8 py-6 flex flex-col items-center justify-center">
-                    <h3 class="mb-1 leading-5 text-orange font-supercell font-bold text-2xl" :class="{ 'text-rouge': kipikActive }">
+                    <h3 class="mb-1 leading-5 text-orange font-supercell font-bold text-2xl">
                       Kipik
                     </h3>
                     <p class="text-beige text-xl tracking-normal font-bold leading-5 mt-3" :class="{ 'text-white': kipikActive }">
@@ -51,7 +51,7 @@
                 :class="{ 'bg-beige': roseActive }"
                 class="mx-auto w-full rounded focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none"            >
                 <div class="shadow px-8 py-6 flex flex-col items-center justify-center">
-                    <h3 class="mb-1 leading-5 text-orange focus:opacity-100 font-supercell font-bold text-2xl" :class="{ 'text-rouge': roseActive }">
+                    <h3 class="mb-1 leading-5 text-orange focus:opacity-100 font-supercell font-bold text-2xl">
                         Rose
                     </h3>
                     <p class="text-beige text-xl tracking-normal font-bold leading-5 mt-3" :class="{ 'text-white': roseActive }">
@@ -73,7 +73,7 @@
                 class="mx-auto w-full rounded focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none"
             >
                 <div class="shadow px-8 py-6 flex flex-col items-center justify-center">
-                    <h3 class="mb-1 leading-5 text-orange font-supercell font-bold text-2xl" :class="{ 'text-rouge': paqueretteActive }">
+                    <h3 class="mb-1 leading-5 text-orange font-supercell font-bold text-2xl">
                         Pâquerette
                     </h3>
                     <p class="text-beige text-xl tracking-normal font-bold leading-5 mt-3" :class="{ 'text-white': paqueretteActive }">
@@ -85,7 +85,7 @@
                 </div>
             </button>
         </li>
-        <li class="col-span-2 " :class="{ active: activeOption === '-' }">
+        <li :class="{ active: activeOption === '-' }">
             <button 
                 type="button" 
                 ontouchstart=""
@@ -131,24 +131,36 @@ export default {
         },
         cactus() {
           this.cactusActive = !this.cactusActive
-          console.log(this.cactusActive)
+          this.kipikActive = false
+          this.roseActive = false
+          this.paqueretteActive = false
+          this.openActive = false
         },
         kipik() {
           this.kipikActive = !this.kipikActive
-          console.log(this.kipikActive)
-        },
+          this.cactusActive = false
+          this.roseActive = false
+          this.paqueretteActive = false
+          this.openActive = false        },
         rose() {
           this.roseActive = !this.roseActive
-          console.log(this.roseActive)
+          this.cactusActive = false
+          this.kipikActive = false
+          this.paqueretteActive = false
+          this.openActive = false 
         },
         paquerette() {
           this.paqueretteActive = !this.paqueretteActive
-          console.log(this.paqueretteActive)
-        },
+          this.cactusActive = false
+          this.kipikActive = false
+          this.roseActive = false
+          this.openActive = false         },
         open() {
           this.openActive = !this.openActive
-          console.log(this.openActive)
-        }
+          this.cactusActive = false
+          this.kipikActive = false
+          this.roseActive = false
+          this.paqueretteActive = false         }
 
 
 
