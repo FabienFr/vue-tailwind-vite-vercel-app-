@@ -171,7 +171,7 @@ export default {
                     ligue: this.ligue,
                 }),
             })
-            alert('Récap: ' + '\n' + '\n' + 'Ligue: '+ this.ligue + '\n' + 'Pseudo: ' + this.pseudo + '\n' + 'Hdv: ' + this.hdv + '\n' + '\n' + 'Merci pour l\'info !' + '\n' + 'Clique sur ok pour remplir un nouveau formulaire...' )
+            alert('Récap : ' + '\n' + '\n' + 'Pseudo : ' + this.pseudo + '\n' + this.hdv + '\n' + 'Ligue souhaitée : '+ this.ligue + '\n' + '\n' + 'Merci pour l\'info !')
             console.log('Pseudo : ' + this.pseudo);
             this.pseudo = '';
             console.log('NewPseudo : ' + this.newPseudo);
