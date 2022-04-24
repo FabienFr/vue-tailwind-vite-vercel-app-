@@ -9,13 +9,13 @@
                 :class="{ 'bg-beige': cactusActive }"
                 class="mx-auto w-full rounded focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none"            >
                 <div class="shadow px-8 py-6 flex flex-col items-center justify-center">
-                    <h3 class="mb-1 leading-5 text-orange font-supercell font-bold text-2xl">
+                    <h3 class="mb-1 leading-5 text-orange font-supercell font-bold text-xl md:text-2xl">
                         Cactus
                     </h3>
-                    <p class="text-beige text-xl tracking-normal font-bold leading-5 mt-3" :class="{ 'text-white': cactusActive }">
+                    <p class="text-beige text-lg md:text-xl tracking-normal font-bold leading-5 mt-3" :class="{ 'text-white': cactusActive }">
                         full hdv 14
                     </p>
-                    <p class="text-beige text-lg tracking-normal font-supercell font-normal leading-5 mt-3" :class="{ 'text-white': cactusActive }">
+                    <p class="text-beige text-md md:text-lg tracking-normal font-supercell font-normal leading-5 mt-3" :class="{ 'text-white': cactusActive }">
                         Master 1
                     </p>
                 </div>
@@ -30,14 +30,14 @@
                 :class="{ 'bg-beige': kipikActive }"
                 class="mx-auto w-full rounded focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none"            >
                 <div class="shadow px-8 py-6 flex flex-col items-center justify-center">
-                    <h3 class="mb-1 leading-5 text-orange font-supercell font-bold text-2xl">
+                    <h3 class="mb-1 leading-5 text-orange font-supercell font-bold text-xl md:text-2xl">
                       Kipik
                     </h3>
-                    <p class="text-beige text-xl tracking-normal font-bold leading-5 mt-3" :class="{ 'text-white': kipikActive }">
+                    <p class="text-beige text-lg md:text-xl tracking-normal font-bold leading-5 mt-3" :class="{ 'text-white': kipikActive }">
                         full hdv 14
                     </p>
-                    <p class="text-beige text-lg tracking-normal font-supercell font-normal leading-5 mt-3" :class="{ 'text-white': kipikActive }">
-                        Master 1
+                    <p class="text-beige text-md md:text-lg tracking-normal font-supercell font-normal leading-5 mt-3" :class="{ 'text-white': kipikActive }">
+                        Master 2
                     </p>
                 </div>
             </button>
@@ -51,14 +51,14 @@
                 :class="{ 'bg-beige': roseActive }"
                 class="mx-auto w-full rounded focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none"            >
                 <div class="shadow px-8 py-6 flex flex-col items-center justify-center">
-                    <h3 class="mb-1 leading-5 text-orange focus:opacity-100 font-supercell font-bold text-2xl">
+                    <h3 class="mb-1 leading-5 text-orange focus:opacity-100 font-supercell font-bold text-xl md:text-2xl">
                         Rose
                     </h3>
-                    <p class="text-beige text-xl tracking-normal font-bold leading-5 mt-3" :class="{ 'text-white': roseActive }">
-                        full hdv 14
+                    <p class="text-beige text-lg md:text-xl tracking-normal font-bold leading-5 mt-3" :class="{ 'text-white': roseActive }">
+                        mixte hdv 13 / 14
                     </p>
-                    <p class="text-beige text-lg tracking-normal font-supercell font-normal leading-5 mt-3" :class="{ 'text-white': roseActive }">
-                        Master 1
+                    <p class="text-beige text-md md:text-lg tracking-normal font-supercell font-normal leading-5 mt-3" :class="{ 'text-white': roseActive }">
+                        Master 3
                     </p>
                 </div>
             </button>
@@ -73,14 +73,14 @@
                 class="mx-auto w-full rounded focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none"
             >
                 <div class="shadow px-8 py-6 flex flex-col items-center justify-center">
-                    <h3 class="mb-1 leading-5 text-orange font-supercell font-bold text-2xl">
+                    <h3 class="mb-1 leading-5 text-orange font-supercell font-bold text-xl md:text-2xl">
                         Pâquerette
                     </h3>
-                    <p class="text-beige text-xl tracking-normal font-bold leading-5 mt-3" :class="{ 'text-white': paqueretteActive }">
-                        full hdv 14
+                    <p class="text-beige text-lg md:text-xl tracking-normal font-bold leading-5 mt-3" :class="{ 'text-white': paqueretteActive }">
+                        mixte hdv 9 à 14
                     </p>
-                    <p class="text-beige text-lg tracking-normal font-supercell font-normal leading-5 mt-3" :class="{ 'text-white': paqueretteActive }">
-                        Master 1
+                    <p class="text-beige text-md md:text-lg tracking-normal font-supercell font-normal leading-5 mt-3" :class="{ 'text-white': paqueretteActive }">
+                        Cristal 3
                     </p>
                 </div>
             </button>
@@ -95,7 +95,7 @@
                 class="mx-auto w-full rounded focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none"
             >
                 <div class="shadow px-8 py-6 flex items-center justify-center">
-                    <p class="font-supercell text-orange text-2xl" :class="{ 'text-rouge': openActive }">
+                    <p class="font-supercell text-orange text-xl md:text-2xl">
                         Faites de moi ce que vous voulez !
                     </p>
                 </div>

@@ -3,11 +3,11 @@
         <section
             class="min-w-full mt-10 pt-5 px-5 p-6 hover:shadow-lg hover:bg-lightgrey rounded-xl"
         >
-            <h1 class="font-supercell text-3xl text-gray-700 py5 text-rouge">
+            <h1 class="font-supercell text-2xl md:text-3xl text-gray-700 py5 text-rouge">
                 Compte
             </h1>
             <h2
-                class="font-supercell text-2xl text-gray-700 py5 mt-6 text-orange"
+                class="font-supercell text-xl md:text-2xl text-gray-700 py5 mt-6 text-orange"
             >
                 Pseudo
             </h2>
@@ -67,7 +67,7 @@
                 v-if="pseudo || newPseudo"
                 class="container mx-auto w-full pt-2"
             >
-                <h1 class="font-supercell text-2xl text-gray-700 text-orange">
+                <h1 class="font-supercell text-xl md:text-2xl text-gray-700 text-orange">
                     Hdv
                 </h1>
                 <div class="container mx-auto">
@@ -94,7 +94,7 @@
             v-if="hdv"
             class="min-w-full my-10 pt-5 px-5 p-6 hover:shadow-lg hover:bg-lightgrey rounded-xl"
         >
-            <h1 class="font-supercell text-3xl mb-5 text-rouge">
+            <h1 class="font-supercell text-2xl md:text-3xl mb-5 text-rouge">
                 Niveau de ligue souhaité
             </h1>
             <Ligue v-model="ligue" />
