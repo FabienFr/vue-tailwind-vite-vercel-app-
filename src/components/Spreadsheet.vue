@@ -171,7 +171,7 @@ export default {
                     ligue: this.ligue,
                 }),
             })
-            alert('Vous préférez jouer en ligue ' + this.ligue + ' avec le pseudo ' + this.pseudo + '.' + '\n' + 'Merci pour l\'info !' + '\n' + 'Vous pouvez remplir un nouveau formulaire au besoin...' )
+            alert('Récap: ' + '\n' + '\n' + 'Ligue: '+ this.ligue + '\n' + 'Pseudo:' + this.pseudo + '\n' + 'Hdv: ' + this.hdv + '\n' + '\n' + 'Merci pour l\'info !' + '\n' + 'Clique sur ok pour remplir un nouveau formulaire...' )
             console.log('Pseudo : ' + this.pseudo);
             this.pseudo = '';
             console.log('NewPseudo : ' + this.newPseudo);
