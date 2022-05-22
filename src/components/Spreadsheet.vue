@@ -18,11 +18,10 @@
                     <input
                         v-if="selectedPseudo === ''"
                         type="text"
-                        maxlength="20"
+                        maxlength="4"
                         name="pseudo"
                         class="mx-auto my-5 w-full border border-orange pl-3 py-3 shadow-sm rounded text-sm focus:outline-none focus:border-rouge text-orange"
                         v-model="searchPseudo"
-                        @focus="showToggleNewPseudo = false"
                     />
                     <div
                         v-else
@@ -55,13 +54,6 @@
                         v-if="searchPseudos.length"
                         class="mx-auto rounded bg-lightgrey border border-orange px-4 py-2 space-y-1 z-10 mb-8"
                     >
-                        <li
-                            class="mx-auto px-1 pt-1 pb-2 font-bold text-orange border-b border-orange"
-                        >
-                            Résultat de recherche :
-                            {{ searchPseudos.length }} pseudos trouvés sur
-                            {{ pseudos.length }} joueurs
-                        </li>
                         <li
                             v-for="pseudo in searchPseudos"
                             :key="pseudo.pseudos"
@@ -121,7 +113,7 @@
                 <h1
                     class="font-supercell text-xl md:text-2xl text-gray-700 text-orange"
                 >
-                    Mon Clan
+                    Clan
                 </h1>
                 <div class="container mx-auto">
                     <div class="container mx-auto">
@@ -304,10 +296,10 @@ export default {
                 'Récap : ' +
                     '\n' +
                     '\n' +
-                    'Pseudo : ' +
+                    "Pseudo présent dans la liste d'inscrits : " +
                     this.selectedPseudo +
                     '\n' +
-                    'New Pseudo : ' +
+                    "Pseudo à ajouter à la liste d'inscrits : " +
                     this.newPseudo +
                     '\n' +
                     'Clan : ' +
