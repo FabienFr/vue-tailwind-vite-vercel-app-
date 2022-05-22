@@ -22,6 +22,7 @@
                         name="pseudo"
                         class="mx-auto my-5 w-full border border-orange pl-3 py-3 shadow-sm rounded text-sm focus:outline-none focus:border-rouge text-orange"
                         v-model="searchPseudo"
+                        @focus="showToggleNewPseudo = false"
                     />
                     <div
                         v-else
@@ -52,10 +53,10 @@
                     </div>
                     <ul
                         v-if="searchPseudos.length"
-                        class="w-full rounded bg-white border border-gray-300 px-4 py-2 space-y-1 absolute z-10"
+                        class="mx-auto rounded bg-lightgrey border border-orange px-4 py-2 space-y-1 z-10 mb-8"
                     >
                         <li
-                            class="px-1 pt-1 pb-2 font-bold border-b border-gray-200"
+                            class="mx-auto px-1 pt-1 pb-2 font-bold text-orange border-b border-orange"
                         >
                             Résultat de recherche :
                             {{ searchPseudos.length }} pseudos trouvés sur
@@ -65,7 +66,7 @@
                             v-for="pseudo in searchPseudos"
                             :key="pseudo.pseudos"
                             @click="selectPseudo(pseudo.pseudos)"
-                            class="cursor-pointer hover:bg-gray-100 p-1"
+                            class="cursor-pointer text-orange hover:bg-gray-100 p-1"
                         >
                             {{ pseudo.pseudos }}
                         </li>
@@ -85,7 +86,7 @@
                     class="mx-auto my-5 w-full border border-orange dark:border-gray-700 pl-3 py-3 shadow-sm rounded text-sm focus:outline-none focus:border-orange text-orange bg-transparent dark:text-gray-100"
                 />
             </div>
-            <div class="container mx-auto">
+            <div v-if="showToggleNewPseudo" class="container mx-auto">
                 <div class="items-left justify-center w-full mb-6">
                     <label
                         for="toogleA"
@@ -212,6 +213,8 @@ export default {
             newPseudo: '',
             toggleNewPseudo: '',
             deleteSelectedPseudo: false,
+            showToggleNewPseudo: true,
+            activatedDeleteSelectedPseudo: false,
             hdv: '',
             clan: '',
             liste: [], // Liste data from Google Sheet
@@ -279,6 +282,8 @@ export default {
         },
         activateDeleteSelectedPseudo() {
             this.selectedPseudo = ''
+            this.activatedDeleteSelectedPseudo = true
+            this.showToggleNewPseudo = true
         },
         async submitForm() {
             await fetch(FORMSPARK_ACTION_URL, {
