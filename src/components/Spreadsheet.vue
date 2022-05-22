@@ -3,32 +3,55 @@
         <section
             class="min-w-full mt-10 pt-5 px-5 p-6 hover:shadow-lg hover:bg-lightgrey rounded-xl"
         >
-            <h1 class="font-supercell text-2xl md:text-3xl text-gray-700 py5 text-rouge">
+            <h1
+                class="font-supercell text-2xl md:text-3xl text-gray-700 py5 text-rouge"
+            >
                 Compte
             </h1>
-            <h2
-                class="font-supercell text-xl md:text-2xl text-gray-700 py5 mt-6 text-orange"
-            >
-                Pseudo
-            </h2>
-            <div class="container mx-auto">
-                <input
-                    type="text"
-                    name="pseudo"
-                    class="mx-auto my-5 w-full border border-orange pl-3 py-3 shadow-sm rounded text-sm focus:outline-none focus:border-rouge text-orange"
-                    v-model="pseudo"
-                />
-                <!-- <option v-for="item in liste" :key="item.id">
+            <div v-if="!toggleNewPseudo">
+                <h2
+                    class="font-supercell text-xl md:text-2xl text-gray-700 py5 mt-6 text-orange"
+                >
+                    Pseudo
+                </h2>
+                <div class="container mx-auto">
+                    <input
+                        type="text"
+                        maxlength="20"
+                        name="pseudo"
+                        class="mx-auto my-5 w-full border border-orange pl-3 py-3 shadow-sm rounded text-sm focus:outline-none focus:border-rouge text-orange"
+                        v-model="pseudo"
+                    />
+                    <!-- <option v-for="item in liste" :key="item.id">
                             {{ item.pseudo }}
                         </option> -->
+                </div>
             </div>
-            <!-- <div class="container mx-auto">
+            <div v-if="toggleNewPseudo">
+                <p
+                    class="font-supercell text-2xl text-gray-700 py5 mt-6 text-orange"
+                >
+                    Ajouter mon pseudo
+                </p>
+                <input
+                    type="text"
+                    name="newPseudo"
+                    v-model="newPseudo"
+                    class="mx-auto my-5 w-full border border-orange dark:border-gray-700 pl-3 py-3 shadow-sm rounded text-sm focus:outline-none focus:border-orange text-orange bg-transparent dark:text-gray-100"
+                />
+            </div>
+            <div class="container mx-auto">
                 <div class="items-left justify-center w-full mb-6">
                     <label
                         for="toogleA"
                         class="flex items-center cursor-pointer"
                     >
-                        <div class="relative">
+                        <div
+                            class="text-beige text-xl tracking-normal font-bold"
+                        >
+                            Mon pseudo n'est pas dans la liste
+                        </div>
+                        <div class="relative ml-6">
                             <input
                                 id="toogleA"
                                 type="checkbox"
@@ -42,29 +65,40 @@
                                 class="dot absolute w-6 h-6 bg-beige rounded-full shadow -left-1 -top-1 transition"
                             ></div>
                         </div>
-                        <div
-                            class="ml-3 text-beige text-xl tracking-normal font-bold"
-                        >
-                            Mon pseudo n'est pas dans la liste
-                        </div>
                     </label>
                 </div>
-                <div v-if="toggleNewPseudo">
-                    <p
-                        class="font-supercell text-2xl text-gray-700 py5 mt-2 text-orange"
-                    >
-                        Ajouter mon pseudo
-                    </p>
-                    <input
-                        type="text"
-                        name="newPseudo"
-                        v-model="newPseudo"
-                        class="mx-auto my-5 w-full border border-orange dark:border-gray-700 pl-3 py-3 shadow-sm rounded text-sm focus:outline-none focus:border-orange text-orange bg-transparent dark:text-gray-100"
-                    />
+            </div>
+            <div
+                v-if="toggleNewPseudo"
+                class="container mx-auto w-full mb-8 pt-2"
+            >
+                <h1
+                    class="font-supercell text-xl md:text-2xl text-gray-700 text-orange"
+                >
+                    Mon Clan
+                </h1>
+                <div class="container mx-auto">
+                    <div class="container mx-auto">
+                        <select
+                            name="hdv"
+                            @input="toggleInput"
+                            v-model="clan"
+                            class="mx-auto mt-5 w-full border border-orange dark:border-gray-700 pl-3 py-3 shadow-sm rounded text-sm focus:outline-none focus:border-orange text-orange bg-transparent dark:text-gray-100"
+                            required
+                        >
+                            <option>Tempête</option>
+                            <option>Sympathique</option>
+                            <option>Tinkmaster4</option>
+                            <option>Fils d'Arès</option>
+                            <option>Autre</option>
+                        </select>
+                    </div>
                 </div>
-            </div> -->
+            </div>
             <div class="container mx-auto w-full pt-2">
-                <h1 class="font-supercell text-xl md:text-2xl text-gray-700 text-orange">
+                <h1
+                    class="font-supercell text-xl md:text-2xl text-gray-700 text-orange"
+                >
                     Hdv
                 </h1>
                 <div class="container mx-auto">
@@ -112,16 +146,16 @@
 </template>
 
 <script>
-
 import Ligue from './Ligue.vue'
 
-const FORMSPARK_ACTION_URL = 'https://submit-form.com/m1p9xjlp'
+// const FORMSPARK_ACTION_URL = 'https://submit-form.com/m1p9xjlp'
+const FORMSPARK_ACTION_URL = 'https://submit-form.com/s4mPXLlR'
 
 export default {
     name: 'Spreadsheet',
 
     components: {
-        Ligue
+        Ligue,
     },
 
     data() {
@@ -130,6 +164,7 @@ export default {
             newPseudo: '',
             toggleNewPseudo: '',
             hdv: '',
+            clan: '',
             liste: [], // Liste data from Google Sheet
             infoSubmit: false,
             newForm: '',
@@ -164,21 +199,45 @@ export default {
                 body: JSON.stringify({
                     pseudo: this.pseudo,
                     newPseudo: this.newPseudo,
+                    clan: this.clan,
                     hdv: this.hdv,
                     ligue: this.ligue,
                 }),
             })
-            alert('Récap : ' + '\n' + '\n' + 'Pseudo : ' + this.pseudo + '\n' + this.hdv + '\n' + 'Ligue souhaitée : '+ this.ligue + '\n' + '\n' + 'Merci pour l\'info !')
-            console.log('Pseudo : ' + this.pseudo);
-            this.pseudo = '';
-            console.log('NewPseudo : ' + this.newPseudo);
-            this.newPseudo = '';
-            console.log('Hdv : ' + this.hdv);
-            this.hdv = '';
-            console.log('Choix de ligue : ' + this.ligue);
-            this.ligue = null;
+            alert(
+                'Récap : ' +
+                    '\n' +
+                    '\n' +
+                    'Pseudo : ' +
+                    this.pseudo +
+                    '\n' +
+                    'New Pseudo : ' +
+                    this.newPseudo +
+                    '\n' +
+                    'Clan : ' +
+                    this.clan +
+                    '\n' +
+                    'Hdv : ' +
+                    this.hdv +
+                    '\n' +
+                    'Ligue souhaitée : ' +
+                    this.ligue +
+                    '\n' +
+                    '\n' +
+                    "Merci pour l'info !"
+            )
+            console.log('Pseudo : ' + this.pseudo)
+            this.pseudo = ''
+            console.log('NewPseudo : ' + this.newPseudo)
+            this.newPseudo = ''
+            console.log('Clan : ' + this.clan)
+            this.clan = ''
+            console.log('Hdv : ' + this.hdv)
+            this.hdv = ''
+            console.log('Choix de ligue : ' + this.ligue)
+            this.ligue = null
+            this.toggleNewPseudo = false
         },
-
     },
 }
 </script>
