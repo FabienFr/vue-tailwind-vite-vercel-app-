@@ -16,15 +16,60 @@
                 </h2>
                 <div class="container mx-auto">
                     <input
+                        v-if="selectedPseudo === ''"
                         type="text"
                         maxlength="20"
                         name="pseudo"
                         class="mx-auto my-5 w-full border border-orange pl-3 py-3 shadow-sm rounded text-sm focus:outline-none focus:border-rouge text-orange"
-                        v-model="pseudo"
+                        v-model="searchPseudo"
                     />
-                    <!-- <option v-for="item in liste" :key="item.id">
-                            {{ item.pseudo }}
-                        </option> -->
+                    <div
+                        v-else
+                        class="mx-auto my-5 w-full border border-orange pl-3 py-3 shadow-sm rounded text-sm focus:outline-none focus:border-rouge text-orange flex justify-between"
+                    >
+                        <div>
+                            <p>
+                                <span class="font-semibold">
+                                    {{ selectedPseudo }}</span
+                                >
+                            </p>
+                        </div>
+                        <div
+                            class="cursor-pointer"
+                            @click="activateDeleteSelectedPseudo"
+                        >
+                            <svg
+                                class="h-6 w-6 mr-2"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <title />
+                                <path
+                                    d="M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm3.21,11.79a1,1,0,0,1,0,1.42,1,1,0,0,1-1.42,0L12,13.41l-1.79,1.8a1,1,0,0,1-1.42,0,1,1,0,0,1,0-1.42L10.59,12l-1.8-1.79a1,1,0,0,1,1.42-1.42L12,10.59l1.79-1.8a1,1,0,0,1,1.42,1.42L13.41,12Z"
+                                    fill="#db0c14"
+                                />
+                            </svg>
+                        </div>
+                    </div>
+                    <ul
+                        v-if="searchPseudos.length"
+                        class="w-full rounded bg-white border border-gray-300 px-4 py-2 space-y-1 absolute z-10"
+                    >
+                        <li
+                            class="px-1 pt-1 pb-2 font-bold border-b border-gray-200"
+                        >
+                            Résultat de recherche :
+                            {{ searchPseudos.length }} pseudos trouvés sur
+                            {{ pseudos.length }} joueurs
+                        </li>
+                        <li
+                            v-for="pseudo in searchPseudos"
+                            :key="pseudo.pseudos"
+                            @click="selectPseudo(pseudo.pseudos)"
+                            class="cursor-pointer hover:bg-gray-100 p-1"
+                        >
+                            {{ pseudo.pseudos }}
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div v-if="toggleNewPseudo">
@@ -147,6 +192,8 @@
 
 <script>
 import Ligue from './Ligue.vue'
+import { ref, computed } from 'vue'
+import pseudos from '../data/pseudos.json'
 
 // const FORMSPARK_ACTION_URL = 'https://submit-form.com/m1p9xjlp'
 const FORMSPARK_ACTION_URL = 'https://submit-form.com/s4mPXLlR'
@@ -161,8 +208,10 @@ export default {
     data() {
         return {
             pseudo: '',
+            pseudos,
             newPseudo: '',
             toggleNewPseudo: '',
+            deleteSelectedPseudo: false,
             hdv: '',
             clan: '',
             liste: [], // Liste data from Google Sheet
@@ -185,9 +234,51 @@ export default {
     //         })
     //         .then((response) => (this.liste = response.data.results))
     // },
+
+    setup() {
+        let searchPseudo = ref('')
+
+        const searchPseudos = computed(() => {
+            if (searchPseudo.value === '') {
+                return []
+            }
+            let matches = 0
+
+            return pseudos.filter((pseudo) => {
+                if (
+                    pseudo.pseudos
+                        .toLowerCase()
+                        .includes(searchPseudo.value.toLowerCase()) &&
+                    matches < 10
+                ) {
+                    matches++
+                    return pseudo
+                }
+            })
+        })
+
+        const selectPseudo = (pseudo) => {
+            selectedPseudo.value = pseudo
+            searchPseudo.value = ''
+        }
+
+        let selectedPseudo = ref('')
+
+        return {
+            pseudos,
+            searchPseudo,
+            searchPseudos,
+            selectPseudo,
+            selectedPseudo,
+        }
+    },
+
     methods: {
         toggleInput() {
             this.infoSubmit = false
+        },
+        activateDeleteSelectedPseudo() {
+            this.selectedPseudo = ''
         },
         async submitForm() {
             await fetch(FORMSPARK_ACTION_URL, {
@@ -197,7 +288,7 @@ export default {
                     Accept: 'application/json',
                 },
                 body: JSON.stringify({
-                    pseudo: this.pseudo,
+                    pseudo: this.selectedPseudo,
                     newPseudo: this.newPseudo,
                     clan: this.clan,
                     hdv: this.hdv,
@@ -209,7 +300,7 @@ export default {
                     '\n' +
                     '\n' +
                     'Pseudo : ' +
-                    this.pseudo +
+                    this.selectedPseudo +
                     '\n' +
                     'New Pseudo : ' +
                     this.newPseudo +
@@ -226,8 +317,8 @@ export default {
                     '\n' +
                     "Merci pour l'info !"
             )
-            console.log('Pseudo : ' + this.pseudo)
-            this.pseudo = ''
+            console.log('Pseudo : ' + this.selectedPseudo)
+            this.selectedPseudo = ''
             console.log('NewPseudo : ' + this.newPseudo)
             this.newPseudo = ''
             console.log('Clan : ' + this.clan)
