@@ -1,10 +1,22 @@
 <template>
-    <div class="w-full max-w-3xl mx-auto">
+    <div class="w-full max-w-3xl min-h-screen mx-auto flex flex-col">
         <Header
             title="Inscription aux Ligues"
             subtitle="Clans Tempête, Sympathique, Tinkmaster4, Fils d'Arès"
             period="Juin 2022"
         />
+        <div class="md:hidden w-full my-10 py-5 px-5 bg-gray-50 rounded-xl">
+            <button
+                type="submit"
+                v-if="!infoSubmit"
+                @click="goToForm('toForm1')"
+                class="w-full border border-beige hover:bg-beige transition duration-150 ease-in-out focus:ring-orange rounded-lg font-supercell text-beige hover:text-white px-8 py-4 text-lg focus:outline-none"
+            >
+                Inscription aux Ligues
+            </button>
+        </div>
+    </div>
+    <div ref="toForm1" class="min-h-screen">
         <Spreadsheet />
     </div>
 </template>
@@ -26,6 +38,14 @@ export default {
             body: JSON.stringify({ timeZone, locale }),
             headers: { 'Content-Type': 'application/json' },
         })
+    },
+    methods: {
+        goToForm(refName) {
+            let element = this.$refs[refName]
+            console.log(element)
+            let top = element.offsetTop
+            window.scrollTo(0, top)
+        },
     },
 }
 </script>
