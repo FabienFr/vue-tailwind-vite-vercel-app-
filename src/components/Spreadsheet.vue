@@ -14,18 +14,7 @@
                 >
                     Pseudo
                 </h2>
-                <div class="container mx-auto">
-                    <input
-                        type="text"
-                        maxlength="20"
-                        name="pseudo"
-                        class="mx-auto my-5 w-full border border-orange pl-3 py-3 shadow-sm rounded text-sm focus:outline-none focus:border-rouge text-orange"
-                        v-model="pseudo"
-                    />
-                    <!-- <option v-for="item in liste" :key="item.id">
-                            {{ item.pseudo }}
-                        </option> -->
-                </div>
+                <SearchAutocomplete />
             </div>
             <div v-if="toggleNewPseudo">
                 <p
@@ -147,6 +136,7 @@
 
 <script>
 import Ligue from './Ligue.vue'
+import SearchAutocomplete from './SearchAutocomplete.vue'
 
 // const FORMSPARK_ACTION_URL = 'https://submit-form.com/m1p9xjlp'
 const FORMSPARK_ACTION_URL = 'https://submit-form.com/s4mPXLlR'
@@ -156,6 +146,7 @@ export default {
 
     components: {
         Ligue,
+        SearchAutocomplete,
     },
 
     data() {
