@@ -3,6 +3,15 @@ module.exports = {
     purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
     darkMode: false,
     theme: {
+        screens: {
+            xxxs: '320px',
+            xxs: '375px',
+            xs: '425px',
+            sm: '768px',
+            md: '1024px',
+            xl: '1440px',
+            '2xl': '2560px',
+        },
         colors: {
             bordeaux: '#a21915',
             rouge: '#db0c14',

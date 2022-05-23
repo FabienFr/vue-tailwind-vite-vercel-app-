@@ -1,28 +1,28 @@
 <template>
-    <ul class="grid sm:grid-cols-1 md:grid-cols-2 gap-8">
+    <ul class="grid grid-cols-2 md:grid-cols-2 gap-8">
         <li :class="{ active: activeOption === 'Cactus' }">
             <button
                 type="button"
                 @click="activate('Cactus'), cactus()"
                 :class="{ 'bg-beige': cactusActive }"
-                class="mx-auto w-full rounded focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none"
+                class="mx-auto rounded focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none flex flex-col items-center justify-center"
             >
                 <div
-                    class="shadow px-8 py-6 flex flex-col items-center justify-center"
+                    class="shadow w-36 xxs:w-44 xs:w-48 md:w-56 h-44 px-8 py-6 flex flex-col items-center justify-center"
                 >
                     <h3
-                        class="mb-1 leading-5 text-orange font-supercell font-bold text-xl md:text-2xl"
+                        class="mb-1 leading-5 text-orange font-supercell font-bold text-sm md:text-lg lg:xl xl:2xl"
                     >
                         Cactus
                     </h3>
                     <p
-                        class="text-beige text-lg md:text-xl tracking-normal font-bold leading-5 mt-3"
+                        class="text-beige text-sm md:text-xl tracking-normal font-bold leading-5 mt-3"
                         :class="{ 'text-white': cactusActive }"
                     >
                         full hdv 14
                     </p>
                     <p
-                        class="text-beige text-md md:text-lg tracking-normal font-supercell font-normal leading-5 mt-3"
+                        class="text-beige text-sm md:text-lg lg:xl xl:2xl tracking-normal font-supercell font-normal leading-5 mt-3"
                         :class="{ 'text-white': cactusActive }"
                     >
                         Master 1
@@ -35,24 +35,24 @@
                 type="button"
                 @click="activate('Agave'), agave()"
                 :class="{ 'bg-beige': agaveActive }"
-                class="mx-auto w-full rounded focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none"
+                class="mx-auto rounded focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none flex flex-col items-center justify-center"
             >
                 <div
-                    class="shadow px-8 py-6 flex flex-col items-center justify-center"
+                    class="shadow w-36 xxs:w-44 xs:w-48 md:w-56 h-44 px-8 py-6 flex flex-col items-center justify-center"
                 >
                     <h3
-                        class="mb-1 leading-5 text-orange font-supercell font-bold text-xl md:text-2xl"
+                        class="mb-1 leading-5 text-orange font-supercell font-bold text-sm md:text-lg lg:xl xl:2xl"
                     >
                         Agave
                     </h3>
                     <p
-                        class="text-beige text-lg md:text-xl tracking-normal font-bold leading-5 mt-3"
+                        class="text-beige text-sm md:text-xl tracking-normal font-bold leading-5 mt-3"
                         :class="{ 'text-white': agaveActive }"
                     >
                         full hdv 14
                     </p>
                     <p
-                        class="text-beige text-md md:text-lg tracking-normal font-supercell font-normal leading-5 mt-3"
+                        class="text-beige text-sm md:text-lg lg:xl xl:2xl tracking-normal font-supercell font-normal leading-5 mt-3"
                         :class="{ 'text-white': agaveActive }"
                     >
                         Master 1
@@ -65,24 +65,24 @@
                 type="button"
                 @click="activate('Kipik'), kipik()"
                 :class="{ 'bg-beige': kipikActive }"
-                class="mx-auto w-full rounded focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none"
+                class="mx-auto rounded focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none flex flex-col items-center justify-center"
             >
                 <div
-                    class="shadow px-8 py-6 flex flex-col items-center justify-center"
+                    class="shadow w-36 xxs:w-44 xs:w-48 md:w-56 h-44 px-8 py-6 flex flex-col items-center justify-center"
                 >
                     <h3
-                        class="mb-1 leading-5 text-orange font-supercell font-bold text-xl md:text-2xl"
+                        class="mb-1 leading-5 text-orange font-supercell font-bold text-sm md:text-lg lg:xl xl:2xl"
                     >
                         Kipik
                     </h3>
                     <p
-                        class="text-beige text-lg md:text-xl tracking-normal font-bold leading-5 mt-3"
+                        class="text-beige text-sm md:text-xl tracking-normal font-bold leading-5 mt-3"
                         :class="{ 'text-white': kipikActive }"
                     >
                         full hdv 14
                     </p>
                     <p
-                        class="text-beige text-md md:text-lg tracking-normal font-supercell font-normal leading-5 mt-3"
+                        class="text-beige text-sm md:text-lg lg:xl xl:2xl tracking-normal font-supercell font-normal leading-5 mt-3"
                         :class="{ 'text-white': kipikActive }"
                     >
                         Master 2
@@ -95,24 +95,24 @@
                 type="button"
                 @click="activate('Rose', rose())"
                 :class="{ 'bg-beige': roseActive }"
-                class="mx-auto w-full rounded focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none"
+                class="mx-auto rounded focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none flex flex-col items-center justify-center"
             >
                 <div
-                    class="shadow px-8 py-6 flex flex-col items-center justify-center"
+                    class="shadow w-36 xxs:w-44 xs:w-48 md:w-56 h-44 px-8 py-6 flex flex-col items-center justify-center"
                 >
                     <h3
-                        class="mb-1 leading-5 text-orange focus:opacity-100 font-supercell font-bold text-xl md:text-2xl"
+                        class="mb-1 leading-5 text-orange focus:opacity-100 font-supercell font-bold text-sm md:text-lg lg:xl xl:2xl"
                     >
                         Rose
                     </h3>
                     <p
-                        class="text-beige text-lg md:text-xl tracking-normal font-bold leading-5 mt-3"
+                        class="text-beige text-sm md:text-xl tracking-normal font-bold leading-5 mt-3"
                         :class="{ 'text-white': roseActive }"
                     >
                         mixte hdv 13 / 14
                     </p>
                     <p
-                        class="text-beige text-md md:text-lg tracking-normal font-supercell font-normal leading-5 mt-3"
+                        class="text-beige text-sm md:text-lg lg:xl xl:2xl tracking-normal font-supercell font-normal leading-5 mt-3"
                         :class="{ 'text-white': roseActive }"
                     >
                         Master 3
@@ -125,24 +125,24 @@
                 type="button"
                 @click="activate('Paquerette'), paquerette()"
                 :class="{ 'bg-beige': paqueretteActive }"
-                class="mx-auto w-full rounded focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none"
+                class="mx-auto rounded focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none flex flex-col items-center justify-center"
             >
                 <div
-                    class="shadow px-8 py-6 flex flex-col items-center justify-center"
+                    class="shadow w-36 xxs:w-44 xs:w-48 md:w-56 h-44 xxxs:px-1 py-6 flex flex-col items-center justify-center"
                 >
                     <h3
-                        class="mb-1 leading-5 text-orange font-supercell font-bold text-xl md:text-2xl"
+                        class="mb-1 leading-5 text-orange font-supercell font-bold text-sm md:text-lg lg:xl xl:2xl"
                     >
                         Pâquerette
                     </h3>
                     <p
-                        class="text-beige text-lg md:text-xl tracking-normal font-bold leading-5 mt-3"
+                        class="text-beige text-sm md:text-xl lg:2xl tracking-normal font-bold leading-5 mt-3"
                         :class="{ 'text-white': paqueretteActive }"
                     >
                         mixte hdv 9 à 14
                     </p>
                     <p
-                        class="text-beige text-md md:text-lg tracking-normal font-supercell font-normal leading-5 mt-3"
+                        class="text-beige text-sm md:text-lg lg:xl xl:2xl tracking-normal font-supercell font-normal leading-5 mt-3"
                         :class="{ 'text-white': paqueretteActive }"
                     >
                         Cristal 3
@@ -155,11 +155,16 @@
                 type="button"
                 @click="activate('-'), open()"
                 :class="{ 'bg-beige': openActive }"
-                class="mx-auto w-full rounded focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none"
+                class="mx-auto rounded focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none flex flex-col items-center justify-center"
             >
-                <div class="shadow px-8 py-6 flex items-center justify-center">
-                    <p class="font-supercell text-orange text-xl md:text-2xl">
-                        Faites de moi ce que vous voudrez !
+                <div
+                    class="shadow w-36 xxs:w-44 xs:w-48 md:w-56 h-44 xxxs:px-1 py-6 flex items-center justify-center"
+                >
+                    <p
+                        class="font-supercell text-orange text-sm md:text-lg lg:xl xl:2xl"
+                    >
+                        Faites <br />de moi <br />ce que <br />vous
+                        <br />voudrez
                     </p>
                 </div>
             </button>

@@ -229,7 +229,7 @@
                     ref="toForm2"
                     id="step2"
                     v-if="hdv"
-                    class="min-w-full my-10 pt-5 px-5 p-10 hover:shadow-lg hover:bg-lightgrey rounded-xl"
+                    class="min-w-full my-10 p-10 hover:shadow-lg hover:bg-lightgrey rounded-xl"
                 >
                     <h1
                         class="font-supercell text-2xl md:text-3xl mb-14 text-rouge text-center"
