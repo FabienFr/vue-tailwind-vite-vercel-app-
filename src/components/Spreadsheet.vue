@@ -14,7 +14,7 @@
                         v-if="!toggleNewPseudo"
                         class="font-supercell text-2xl md:text-3xl text-gray-700 py-5 text-rouge mb-8 text-center"
                     >
-                        Compte existant
+                        Compte
                     </h1>
                     <h1
                         v-else
@@ -27,7 +27,7 @@
                         <h2
                             class="font-supercell text-md md:text-2xl text-gray-700 py5 mt-6 text-orange"
                         >
-                            Sélectionner mon pseudo
+                            Pseudo
                         </h2>
                         <div class="container mx-auto">
                             <input
@@ -35,7 +35,7 @@
                                 type="text"
                                 maxlength="4"
                                 name="pseudo"
-                                placeholder="Commences à taper un pseudo déjà enregistré pour le trouver"
+                                placeholder="Saisis les premières lettres de ton pseudo"
                                 class="mx-auto my-5 w-full border border-orange pl-3 py-3 shadow-sm rounded text-sm focus:outline-none focus:border-rouge text-orange"
                                 v-model="searchPseudo"
                                 required
@@ -102,40 +102,46 @@
                         <div class="items-left justify-center w-full mb-6">
                             <label
                                 for="toogleA"
-                                class="flex justify-between cursor-pointer"
+                                class="flex items-center cursor-pointer"
                             >
+                                <div class="relative ml-6">
+                                    <div class="">
+                                        <div
+                                            @click="
+                                                activateDeleteSelectedPseudo
+                                            "
+                                        >
+                                            <input
+                                                id="toogleA"
+                                                type="checkbox"
+                                                class="sr-only"
+                                                v-model="toggleNewPseudo"
+                                            />
+                                        </div>
+                                        <div
+                                            class="w-10 h-4 bg-lightgrey rounded-full shadow-inner pt-4"
+                                        ></div>
+                                        <div
+                                            v-if="!toggleNewPseudo"
+                                            class="absolute w-6 h-6 bg-beige rounded-full shadow -left-1 -top-1 transition"
+                                        ></div>
+                                        <div
+                                            v-else
+                                            class="absolute w-6 h-6 bg-orange rounded-full shadow -left-1 -top-1 transition translate-x-6"
+                                        ></div>
+                                    </div>
+                                </div>
                                 <div
                                     v-if="!toggleNewPseudo"
-                                    class="text-beige text-sm md:text-xl tracking-normal font-bold"
+                                    class="text-beige text-sm md:text-xl tracking-normal font-bold ml-4"
                                 >
-                                    Entrer un nouveau pseudo
+                                    Mon pseudo n'est pas dans la liste
                                 </div>
                                 <div
                                     v-else
-                                    class="text-orange text-sm md:text-xl tracking-normal font-bold"
+                                    class="text-orange text-sm md:text-xl tracking-normal font-bold ml-4"
                                 >
-                                    Chercher un pseudo
-                                </div>
-                                <div class="relative ml-6">
-                                    <div @click="activateDeleteSelectedPseudo">
-                                        <input
-                                            id="toogleA"
-                                            type="checkbox"
-                                            class="sr-only"
-                                            v-model="toggleNewPseudo"
-                                        />
-                                    </div>
-                                    <div
-                                        class="w-10 h-4 bg-lightgrey rounded-full shadow-inner pt-4"
-                                    ></div>
-                                    <div
-                                        v-if="!toggleNewPseudo"
-                                        class="absolute w-6 h-6 bg-beige rounded-full shadow -left-1 -top-1 transition"
-                                    ></div>
-                                    <div
-                                        v-else
-                                        class="absolute w-6 h-6 bg-orange rounded-full shadow -left-1 -top-1 transition translate-x-6"
-                                    ></div>
+                                    Mon pseudo est dans la liste
                                 </div>
                             </label>
                         </div>
@@ -185,7 +191,6 @@
                                 <select
                                     name="hdv"
                                     @input="toggleInput"
-                                    @blur="goToForm2('toForm2')"
                                     v-model="hdv"
                                     class="mx-auto mt-5 w-full border border-orange dark:border-gray-700 pl-3 py-3 shadow-sm rounded text-sm focus:outline-none focus:border-orange text-orange bg-transparent dark:text-gray-100"
                                     required
@@ -202,17 +207,17 @@
                     </div>
                     <button
                         v-if="toggleNewPseudo"
-                        @click="goToForm2('toForm2')"
+                        @click.prevent="goToForm2('toForm2')"
                         class="w-full border border-beige hover:bg-beige transition duration-150 ease-in-out focus:ring-orange rounded-lg font-supercell text-beige hover:text-white px-8 py-4 text-md md:text-lg focus:outline-none"
                     >
-                        Choisis ton niveau de ligue
+                        Choisir mon niveau de ligue
                     </button>
                     <button
                         v-else
-                        @click="goToForm2('toForm2')"
+                        @click.prevent="goToForm2('toForm2')"
                         class="w-full border border-orange hover:bg-beige transition duration-150 ease-in-out focus:ring-orange rounded-lg font-supercell text-orange hover:text-white px-8 py-4 text-md md:text-lg focus:outline-none"
                     >
-                        Choisis ton niveau de ligue
+                        Choisir mon niveau de ligue
                     </button>
                 </div>
             </div>
