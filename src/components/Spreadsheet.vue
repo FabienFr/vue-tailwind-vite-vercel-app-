@@ -253,7 +253,7 @@
         <transition name="fade">
             <div
                 id="pagetop"
-                class="fixed right-0 bottom-0"
+                class="fixed right-2 bottom-2"
                 v-show="scY > 300"
                 @click="toTop"
             >
