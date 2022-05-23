@@ -11,10 +11,10 @@
             <div class="w-full my-10 py-5 px-5 bg-gray-50 rounded-xl">
                 <button
                     type="submit"
-                    @click="goToForm('toForm1')"
+                    @click="goToForm1('toForm1')"
                     class="w-full border border-beige hover:bg-beige transition duration-150 ease-in-out focus:ring-orange rounded-lg font-supercell text-beige hover:text-white px-8 py-4 text-lg focus:outline-none"
                 >
-                    Inscription aux Ligues
+                    Je m'inscris
                 </button>
             </div>
         </div>
@@ -27,6 +27,7 @@
 <script>
 import Header from './components/Header.vue'
 import Spreadsheet from './components/Spreadsheet.vue'
+import { ref } from 'vue'
 
 export default {
     name: 'App',
@@ -43,7 +44,7 @@ export default {
         })
     },
     methods: {
-        goToForm(refName) {
+        goToForm1(refName) {
             let element = this.$refs[refName]
             console.log(element)
             let top = element.offsetTop

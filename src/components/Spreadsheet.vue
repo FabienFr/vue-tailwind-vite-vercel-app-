@@ -1,19 +1,27 @@
 <template>
     <form @submit.prevent="submitForm" class="container mx-auto">
         <section
-            class="min-w-full min-h-screen grid grid-col-1 items-center justify-center mt-10 pt-5 px-5 p-6 hover:shadow-lg hover:bg-lightgrey rounded-xl"
+            class="min-w-full min-h-screen grid grid-col-1 items-center justify-center mt-10 py-6 rounded-xl"
         >
-            <div>
+            <div class="hover:shadow-lg hover:bg-lightgrey p-2">
                 <h1
-                    class="font-supercell text-2xl md:text-3xl text-gray-700 py5 text-rouge"
+                    v-if="!toggleNewPseudo"
+                    class="font-supercell text-2xl md:text-3xl text-gray-700 py-5 text-rouge mb-8 text-center"
                 >
-                    Compte
+                    Compte existant
                 </h1>
+                <h1
+                    v-else
+                    class="font-supercell text-2xl md:text-3xl text-gray-700 py-5 text-beige mb-8 text-center"
+                >
+                    Nouveau compte
+                </h1>
+
                 <div v-if="!toggleNewPseudo">
                     <h2
-                        class="font-supercell text-xl md:text-2xl text-gray-700 py5 mt-6 text-orange"
+                        class="font-supercell text-md md:text-2xl text-gray-700 py5 mt-6 text-orange"
                     >
-                        Pseudo
+                        Sélectionner mon pseudo
                     </h2>
                     <div class="container mx-auto">
                         <input
@@ -21,8 +29,10 @@
                             type="text"
                             maxlength="4"
                             name="pseudo"
+                            placeholder="Commences à taper un pseudo déjà enregistré pour le trouver"
                             class="mx-auto my-5 w-full border border-orange pl-3 py-3 shadow-sm rounded text-sm focus:outline-none focus:border-rouge text-orange"
                             v-model="searchPseudo"
+                            required
                         />
                         <div
                             v-else
@@ -68,40 +78,57 @@
                 </div>
                 <div v-if="toggleNewPseudo">
                     <p
-                        class="font-supercell text-xl md:text-2xl text-gray-700 py5 mt-6 text-orange"
+                        class="font-supercell text-md md:text-2xl text-gray-700 py5 mt-6 text-beige"
                     >
                         Ajouter mon pseudo
                     </p>
                     <input
                         type="text"
                         name="newPseudo"
+                        maxlength="20"
+                        placeholder="Saisis un nouveau pseudo pour l'enregistrer"
                         v-model="newPseudo"
                         class="mx-auto my-5 w-full border border-orange dark:border-gray-700 pl-3 py-3 shadow-sm rounded text-sm focus:outline-none focus:border-orange text-orange bg-transparent dark:text-gray-100"
+                        required
                     />
                 </div>
                 <div v-if="showToggleNewPseudo" class="container mx-auto">
                     <div class="items-left justify-center w-full mb-6">
                         <label
                             for="toogleA"
-                            class="flex items-center cursor-pointer"
+                            class="flex justify-between cursor-pointer"
                         >
                             <div
-                                class="text-beige text-xl tracking-normal font-bold"
+                                v-if="!toggleNewPseudo"
+                                class="text-beige text-sm md:text-xl tracking-normal font-bold"
                             >
-                                Mon pseudo n'est pas dans la liste
+                                Entrer un nouveau pseudo
+                            </div>
+                            <div
+                                v-else
+                                class="text-orange text-sm md:text-xl tracking-normal font-bold"
+                            >
+                                Chercher un pseudo
                             </div>
                             <div class="relative ml-6">
-                                <input
-                                    id="toogleA"
-                                    type="checkbox"
-                                    class="sr-only"
-                                    v-model="toggleNewPseudo"
-                                />
+                                <div @click="activateDeleteSelectedPseudo">
+                                    <input
+                                        id="toogleA"
+                                        type="checkbox"
+                                        class="sr-only"
+                                        v-model="toggleNewPseudo"
+                                    />
+                                </div>
                                 <div
-                                    class="w-10 h-4 bg-lightgrey rounded-full shadow-inner"
+                                    class="w-10 h-4 bg-lightgrey rounded-full shadow-inner pt-4"
                                 ></div>
                                 <div
-                                    class="dot absolute w-6 h-6 bg-beige rounded-full shadow -left-1 -top-1 transition"
+                                    v-if="!toggleNewPseudo"
+                                    class="absolute w-6 h-6 bg-beige rounded-full shadow -left-1 -top-1 transition"
+                                ></div>
+                                <div
+                                    v-else
+                                    class="absolute w-6 h-6 bg-orange rounded-full shadow -left-1 -top-1 transition translate-x-6"
                                 ></div>
                             </div>
                         </label>
@@ -109,10 +136,10 @@
                 </div>
                 <div
                     v-if="toggleNewPseudo"
-                    class="container mx-auto w-full mb-8 pt-2"
+                    class="container mx-auto w-full mt-4 mb-8 pt-2"
                 >
                     <h1
-                        class="font-supercell text-xl md:text-2xl text-gray-700 text-orange"
+                        class="font-supercell text-md md:text-2xl text-gray-700 text-beige"
                     >
                         Clan
                     </h1>
@@ -136,7 +163,14 @@
                 </div>
                 <div class="container mx-auto w-full pt-2 mb-20">
                     <h1
-                        class="font-supercell text-xl md:text-2xl text-gray-700 text-orange"
+                        v-if="!toggleNewPseudo"
+                        class="font-supercell text-md md:text-2xl text-gray-700 text-orange"
+                    >
+                        Hdv
+                    </h1>
+                    <h1
+                        v-else
+                        class="font-supercell text-md md:text-2xl text-gray-700 text-beige"
                     >
                         Hdv
                     </h1>
@@ -161,37 +195,71 @@
                     </div>
                 </div>
                 <button
+                    v-if="toggleNewPseudo"
                     @click="goToForm2('toForm2')"
-                    class="w-full border border-beige hover:bg-beige transition duration-150 ease-in-out focus:ring-orange rounded-lg font-supercell text-beige hover:text-white px-8 py-4 text-lg focus:outline-none"
+                    class="w-full border border-beige hover:bg-beige transition duration-150 ease-in-out focus:ring-orange rounded-lg font-supercell text-beige hover:text-white px-8 py-4 text-md md:text-lg focus:outline-none"
                 >
-                    Choix du niveau de ligue
+                    Choisis ton niveau de ligue
+                </button>
+                <button
+                    v-else
+                    @click="goToForm2('toForm2')"
+                    class="w-full border border-orange hover:bg-beige transition duration-150 ease-in-out focus:ring-orange rounded-lg font-supercell text-orange hover:text-white px-8 py-4 text-md md:text-lg focus:outline-none"
+                >
+                    Choisis ton niveau de ligue
                 </button>
             </div>
         </section>
         <div class="min-h-screen grid grid-col-1 items-center justify-center">
-            <section
-                ref="toForm2"
-                id="step2"
-                v-if="hdv"
-                class="min-w-full my-10 pt-5 px-5 p-6 hover:shadow-lg hover:bg-lightgrey rounded-xl"
-            >
-                <h1 class="font-supercell text-2xl md:text-3xl mb-5 text-rouge">
-                    Niveau de ligue souhaité
-                </h1>
-                <Ligue v-model="ligue" />
-            </section>
-            <section v-if="hdv" class="min-w-full">
-                <div class="w-full my-10 py-5 px-5 bg-gray-50 rounded-xl">
-                    <button
-                        type="submit"
-                        v-if="!infoSubmit"
-                        class="w-full border border-beige hover:bg-beige transition duration-150 ease-in-out focus:ring-orange rounded-lg font-supercell text-beige hover:text-white px-8 py-4 text-lg focus:outline-none"
+            <div>
+                <section
+                    ref="toForm2"
+                    id="step2"
+                    v-if="hdv"
+                    class="min-w-full my-10 pt-5 px-5 p-10 hover:shadow-lg hover:bg-lightgrey rounded-xl"
+                >
+                    <h1
+                        class="font-supercell text-2xl md:text-3xl mb-14 text-rouge text-center"
                     >
-                        Envoyer
-                    </button>
-                </div>
-            </section>
+                        Niveau de ligue souhaité
+                    </h1>
+                    <Ligue v-model="ligue" />
+                </section>
+                <section v-if="hdv" class="min-w-full">
+                    <div class="w-full my-10 py-5 px-5 bg-gray-50 rounded-xl">
+                        <button
+                            type="submit"
+                            v-if="!infoSubmit"
+                            class="w-full border border-beige hover:bg-beige transition duration-150 ease-in-out focus:ring-orange rounded-lg font-supercell text-beige hover:text-white px-8 py-4 text-lg focus:outline-none"
+                        >
+                            Envoyer
+                        </button>
+                    </div>
+                </section>
+            </div>
         </div>
+        <transition name="fade">
+            <div
+                id="pagetop"
+                class="fixed right-0 bottom-0"
+                v-show="scY > 300"
+                @click="toTop"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="48"
+                    height="48"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#db0c14"
+                    stroke-width="1"
+                    stroke-linecap="square"
+                    stroke-linejoin="arcs"
+                >
+                    <path d="M18 15l-6-6-6 6" />
+                </svg>
+            </div>
+        </transition>
     </form>
 </template>
 
@@ -225,6 +293,8 @@ export default {
             infoSubmit: false,
             newForm: '',
             ligue: null,
+            scTimer: 0,
+            scY: 0,
         }
     },
     // mounted() {
@@ -241,6 +311,10 @@ export default {
     //         })
     //         .then((response) => (this.liste = response.data.results))
     // },
+
+    mounted() {
+        window.addEventListener('scroll', this.handleScroll)
+    },
 
     setup() {
         let searchPseudo = ref('')
@@ -281,6 +355,20 @@ export default {
     },
 
     methods: {
+        handleScroll: function () {
+            if (this.scTimer) return
+            this.scTimer = setTimeout(() => {
+                this.scY = window.scrollY
+                clearTimeout(this.scTimer)
+                this.scTimer = 0
+            }, 100)
+        },
+        toTop: function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth',
+            })
+        },
         goToForm2(refName) {
             let element2 = this.$refs[refName]
             console.log(element2)
@@ -343,15 +431,10 @@ export default {
             console.log('Choix de ligue : ' + this.ligue)
             this.ligue = null
             this.toggleNewPseudo = false
+            window.location = top.location.href
         },
     },
 }
 </script>
 
-<style scoped>
-/* Toggle A */
-input:checked ~ .dot {
-    transform: translateX(100%);
-    background-color: #e95432;
-}
-</style>
+<style scoped></style>
