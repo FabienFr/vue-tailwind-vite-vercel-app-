@@ -8,11 +8,13 @@
                 subtitle="Clans Tempête, Sympathique, Tinkmaster4, Fils d'Arès"
                 period="Juin 2022"
             />
-            <div class="w-full my-10 py-5 px-5 bg-gray-50 rounded-xl">
+            <div
+                class="w-full my-10 py-5 px-5 bg-gray-50 rounded-xl flex item-center justify-center"
+            >
                 <button
                     type="submit"
                     @click="goToForm1('toForm1')"
-                    class="w-full border border-beige hover:bg-beige transition duration-150 ease-in-out focus:ring-orange rounded-lg font-supercell text-beige hover:text-white px-8 py-4 text-lg focus:outline-none"
+                    class="w-72 border border-beige hover:bg-beige transition duration-150 ease-in-out focus:ring-orange rounded-lg font-supercell text-beige hover:text-white px-8 py-4 text-lg focus:outline-none"
                 >
                     Je m'inscris
                 </button>
