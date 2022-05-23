@@ -94,6 +94,7 @@
                             maxlength="20"
                             placeholder="Saisis un nouveau pseudo pour l'enregistrer"
                             v-model="newPseudo"
+                            @blur="newPseudo === ''"
                             class="mx-auto my-5 w-full border border-orange dark:border-gray-700 pl-3 py-3 shadow-sm rounded text-sm focus:outline-none focus:border-orange text-orange bg-transparent dark:text-gray-100"
                             required
                         />
@@ -210,14 +211,14 @@
                         @click.prevent="goToForm2('toForm2')"
                         class="w-full border border-beige hover:bg-beige transition duration-150 ease-in-out focus:ring-orange rounded-lg font-supercell text-beige hover:text-white px-8 py-4 text-md md:text-lg focus:outline-none"
                     >
-                        Choisir mon niveau de ligue
+                        Je choisis ma ligue
                     </button>
                     <button
                         v-else
                         @click.prevent="goToForm2('toForm2')"
                         class="w-full border border-orange hover:bg-beige transition duration-150 ease-in-out focus:ring-orange rounded-lg font-supercell text-orange hover:text-white px-8 py-4 text-md md:text-lg focus:outline-none"
                     >
-                        Choisir mon niveau de ligue
+                        Je choisis ma ligue
                     </button>
                 </div>
             </div>
