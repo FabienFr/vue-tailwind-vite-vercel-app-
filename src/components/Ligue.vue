@@ -109,7 +109,7 @@
                         class="text-beige text-sm md:text-xl tracking-normal font-bold leading-5 mt-3"
                         :class="{ 'text-white': roseActive }"
                     >
-                        mixte hdv 13 / 14
+                        mixte hdv 13-14
                     </p>
                     <p
                         class="text-beige text-sm md:text-lg lg:xl xl:2xl tracking-normal font-supercell font-normal leading-5 mt-3"
@@ -139,7 +139,7 @@
                         class="text-beige text-sm md:text-xl lg:2xl tracking-normal font-bold leading-5 mt-3"
                         :class="{ 'text-white': paqueretteActive }"
                     >
-                        mixte hdv 9 à 14
+                        mixte hdv 10 à 14
                     </p>
                     <p
                         class="text-beige text-sm md:text-lg lg:xl xl:2xl tracking-normal font-supercell font-normal leading-5 mt-3"
