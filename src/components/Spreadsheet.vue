@@ -229,7 +229,7 @@
                     ref="toForm2"
                     id="step2"
                     v-if="hdv"
-                    class="min-w-full my-10 p-10 hover:shadow-lg hover:bg-lightgrey rounded-xl"
+                    class="min-w-full mt-10 mb-5 px-2 hover:shadow-lg hover:bg-lightgrey rounded-xl"
                 >
                     <h1
                         class="font-supercell text-2xl md:text-3xl mb-14 text-rouge text-center"
@@ -239,7 +239,7 @@
                     <Ligue v-model="ligue" />
                 </section>
                 <section v-if="hdv" class="min-w-full">
-                    <div class="w-full my-10 py-5 px-5 bg-gray-50 rounded-xl">
+                    <div class="w-full py-5 px-5 bg-gray-50 rounded-xl">
                         <button
                             type="submit"
                             v-if="!infoSubmit"
@@ -416,10 +416,10 @@ export default {
                 'Récap : ' +
                     '\n' +
                     '\n' +
-                    "Pseudo présent dans la liste d'inscrits : " +
+                    'Pseudo : ' +
                     this.selectedPseudo +
                     '\n' +
-                    "Pseudo à ajouter à la liste d'inscrits : " +
+                    'Nouveau pseudo : ' +
                     this.newPseudo +
                     '\n' +
                     'Clan : ' +

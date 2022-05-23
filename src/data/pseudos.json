@@ -1,335 +1,552 @@
 [
-    {
-        "pseudos": "☠BARLOU☠"
-    },
-    {
-        "pseudos": "☣️Lapinou☣️"
-    },
-    {
-        "pseudos": "⚡️BALIN™"
-    },
-    {
-        "pseudos": "⚡ᴘᴀᴋᴀ127⚡"
-    },
-    {
-        "pseudos": "⭐️JADOU⭐️"
-    },
-    {
-        "pseudos": "AC/DC"
-    },
-    {
-        "pseudos": "Alex'Andra"
-    },
-    {
-        "pseudos": "Amiral_03"
-    },
-    {
-        "pseudos": "AnToiNe"
-    },
-    {
-        "pseudos": "Arm01"
-    },
-    {
-        "pseudos": "AspéGic"
-    },
-    {
-        "pseudos": "ben11"
-    },
-    {
-        "pseudos": "ben13"
-    },
-    {
-        "pseudos": "ben14"
-    },
-    {
-        "pseudos": "Big Bear"
-    },
-    {
-        "pseudos": "BloodAngelOne"
-    },
-    {
-        "pseudos": "Bouba"
-    },
-    {
-        "pseudos": "bullman"
-    },
-    {
-        "pseudos": "claude"
-    },
-    {
-        "pseudos": "Claude 2"
-    },
-    {
-        "pseudos": "clint"
-    },
-    {
-        "pseudos": "Clowny"
-    },
-    {
-        "pseudos": "coach"
-    },
-    {
-        "pseudos": "Coachinette"
-    },
-    {
-        "pseudos": "Coachy"
-    },
-    {
-        "pseudos": "corsair"
-    },
-    {
-        "pseudos": "Damien"
-    },
-    {
-        "pseudos": "Darko"
-    },
-    {
-        "pseudos": "delseb11"
-    },
-    {
-        "pseudos": "Didieu"
-    },
-    {
-        "pseudos": "Djazzy"
-    },
-    {
-        "pseudos": "dojo"
-    },
-    {
-        "pseudos": "eco-fr"
-    },
-    {
-        "pseudos": "Eliott"
-    },
-    {
-        "pseudos": "EMLD.F"
-    },
-    {
-        "pseudos": "Fab III"
-    },
-    {
-        "pseudos": "Fantasy"
-    },
-    {
-        "pseudos": "foudrr"
-    },
-    {
-        "pseudos": "frostgamers"
-    },
-    {
-        "pseudos": "Gaëtan"
-    },
-    {
-        "pseudos": "Gibbs"
-    },
-    {
-        "pseudos": "gibe4"
-    },
-    {
-        "pseudos": "Gorba"
-    },
-    {
-        "pseudos": "GRONZOZ"
-    },
-    {
-        "pseudos": "Grouik"
-    },
-    {
-        "pseudos": "henri"
-    },
-    {
-        "pseudos": "HUGO"
-    },
-    {
-        "pseudos": "hugoboss"
-    },
-    {
-        "pseudos": "HUGOBOSS.2"
-    },
-    {
-        "pseudos": "Jack O'neil"
-    },
-    {
-        "pseudos": "Jc98745"
-    },
-    {
-        "pseudos": "jeremy"
-    },
-    {
-        "pseudos": "JEROME"
-    },
-    {
-        "pseudos": "jimmy"
-    },
-    {
-        "pseudos": "jm"
-    },
-    {
-        "pseudos": "kaiser91"
-    },
-    {
-        "pseudos": "Katsumoto San"
-    },
-    {
-        "pseudos": "kazenmoins"
-    },
-    {
-        "pseudos": "Klimt"
-    },
-    {
-        "pseudos": "Kya"
-    },
-    {
-        "pseudos": "La Cigogne"
-    },
-    {
-        "pseudos": "La Fée"
-    },
-    {
-        "pseudos": "le dje"
-    },
-    {
-        "pseudos": "Le Pirate"
-    },
-    {
-        "pseudos": "le rois arthur"
-    },
-    {
-        "pseudos": "Line Ten"
-    },
-    {
-        "pseudos": "Loficu"
-    },
-    {
-        "pseudos": "Loïc"
-    },
-    {
-        "pseudos": "lulu"
-    },
-    {
-        "pseudos": "lulu2"
-    },
-    {
-        "pseudos": "MASSAÏ"
-    },
-    {
-        "pseudos": "mattéo-lucas"
-    },
-    {
-        "pseudos": "max la menace"
-    },
-    {
-        "pseudos": "mick"
-    },
-    {
-        "pseudos": "nenesses2"
-    },
-    {
-        "pseudos": "Noky"
-    },
-    {
-        "pseudos": "octo nook"
-    },
-    {
-        "pseudos": "oligri"
-    },
-    {
-        "pseudos": "PassPoil"
-    },
-    {
-        "pseudos": "patetlao"
-    },
-    {
-        "pseudos": "petit jean"
-    },
-    {
-        "pseudos": "phicuv"
-    },
-    {
-        "pseudos": "pilote"
-    },
-    {
-        "pseudos": "Porcepic"
-    },
-    {
-        "pseudos": "Rahan_2007"
-    },
-    {
-        "pseudos": "RASCASSE"
-    },
-    {
-        "pseudos": "Romu.38"
-    },
-    {
-        "pseudos": "romuald 38"
-    },
-    {
-        "pseudos": "Sam"
-    },
-    {
-        "pseudos": "SidVonB"
-    },
-    {
-        "pseudos": "SiegfriedVonB"
-    },
-    {
-        "pseudos": "SiegVonB"
-    },
-    {
-        "pseudos": "SigiVonB"
-    },
-    {
-        "pseudos": "SigurdVonB"
-    },
-    {
-        "pseudos": "SivardVonB"
-    },
-    {
-        "pseudos": "STRIKER’s"
-    },
-    {
-        "pseudos": "Taiiji"
-    },
-    {
-        "pseudos": "Tarkhagal"
-    },
-    {
-        "pseudos": "thierry"
-    },
-    {
-        "pseudos": "™️⭐SupernaNO⭐iD"
-    },
-    {
-        "pseudos": "Tonio"
-    },
-    {
-        "pseudos": "TT Chopper"
-    },
-    {
-        "pseudos": "TT Choupp"
-    },
-    {
-        "pseudos": "twapatapeymoa"
-    },
-    {
-        "pseudos": "vincent"
-    },
-    {
-        "pseudos": "wake"
-    },
-    {
-        "pseudos": "Youl"
-    },
-    {
-        "pseudos": "Zelys"
-    },
-    {
-        "pseudos": "zombieland"
-    },
-    {
-        "pseudos": "zorglube"
-    },
-    {
-        "pseudos": "ШДКΞ ЦР"
-    }
+  {
+    "pseudo": "☠BARLOU☠",
+    "hdv": 14,
+    "clan": "Tempête"
+  },
+  {
+    "pseudo": "☣️Lapinou☣️",
+    "hdv": 14,
+    "clan": "Tempête"
+  },
+  {
+    "pseudo": "⚡️BALIN™",
+    "hdv": 14,
+    "clan": "Tempête"
+  },
+  {
+    "pseudo": "⚡ᴘᴀᴋᴀ127⚡",
+    "hdv": 14,
+    "clan": "Tempête"
+  },
+  {
+    "pseudo": "⭐️JADOU⭐️",
+    "hdv": 13,
+    "clan": "Fils d'Arès"
+  },
+  {
+    "pseudo": "AC/DC",
+    "hdv": 13,
+    "clan": "Sympathique"
+  },
+  {
+    "pseudo": "Alex'Andra",
+    "hdv": 14,
+    "clan": "Fils d'Arès"
+  },
+  {
+    "pseudo": "Amiral_03",
+    "hdv": 13,
+    "clan": "Fils d'Arès"
+  },
+  {
+    "pseudo": "AnToiNe",
+    "hdv": 14,
+    "clan": "Tinkmaster4"
+  },
+  {
+    "pseudo": "Arm01",
+    "hdv": 14,
+    "clan": "Sympathique"
+  },
+  {
+    "pseudo": "AspéGic",
+    "hdv": 14,
+    "clan": "Tempête"
+  },
+  {
+    "pseudo": "ben14",
+    "hdv": 14,
+    "clan": "Tempête"
+  },
+  {
+    "pseudo": "ben13",
+    "hdv": 13,
+    "clan": "Fils d'Arès"
+  },
+  {
+    "pseudo": "ben11",
+    "hdv": 11,
+    "clan": "Fils d'Arès"
+  },
+  {
+    "pseudo": "Big Bear",
+    "hdv": 14,
+    "clan": "Tempête"
+  },
+  {
+    "pseudo": "BloodAngelOne",
+    "hdv": 11,
+    "clan": "Fils d'Arès"
+  },
+  {
+    "pseudo": "Bouba",
+    "hdv": 14,
+    "clan": "Sympathique"
+  },
+  {
+    "pseudo": "bullman",
+    "hdv": 12,
+    "clan": "mystère"
+  },
+  {
+    "pseudo": "claude",
+    "hdv": 14,
+    "clan": "Sympathique"
+  },
+  {
+    "pseudo": "Claude 2",
+    "hdv": 14,
+    "clan": "Sympathique"
+  },
+  {
+    "pseudo": "clint",
+    "hdv": 14,
+    "clan": "Tempête"
+  },
+  {
+    "pseudo": "Clowny",
+    "hdv": 13,
+    "clan": "Fils d'Arès"
+  },
+  {
+    "pseudo": "coach",
+    "hdv": 14,
+    "clan": "Tinkmaster4"
+  },
+  {
+    "pseudo": "Coachinette",
+    "hdv": 12,
+    "clan": "Tinkmaster4"
+  },
+  {
+    "pseudo": "Coachy",
+    "hdv": 11,
+    "clan": "Tinkmaster4"
+  },
+  {
+    "pseudo": "corsair",
+    "hdv": 13,
+    "clan": "Sympathique"
+  },
+  {
+    "pseudo": "Damien",
+    "hdv": 14,
+    "clan": "Sympathique"
+  },
+  {
+    "pseudo": "Darko",
+    "hdv": 14,
+    "clan": "Tempête"
+  },
+  {
+    "pseudo": "delseb11",
+    "hdv": 14,
+    "clan": "Sympathique"
+  },
+  {
+    "pseudo": "Didieu",
+    "hdv": 13,
+    "clan": "Tempête"
+  },
+  {
+    "pseudo": "Djazzy",
+    "hdv": 14,
+    "clan": "Tempête"
+  },
+  {
+    "pseudo": "dojo",
+    "hdv": 14,
+    "clan": "Fils d'Arès"
+  },
+  {
+    "pseudo": "eco-fr",
+    "hdv": 13,
+    "clan": "Fils d'Arès"
+  },
+  {
+    "pseudo": "Eliott",
+    "hdv": 10,
+    "clan": "Fils d'Arès"
+  },
+  {
+    "pseudo": "EMLD.F",
+    "hdv": 11,
+    "clan": "Fils d'Arès"
+  },
+  {
+    "pseudo": "Fab III",
+    "hdv": 14,
+    "clan": "Sympathique"
+  },
+  {
+    "pseudo": "Fantasy",
+    "hdv": 13,
+    "clan": "Tempête"
+  },
+  {
+    "pseudo": "foudrr",
+    "hdv": 14,
+    "clan": "Fils d'Arès"
+  },
+  {
+    "pseudo": "frostgamers",
+    "hdv": 13,
+    "clan": "Sympathique"
+  },
+  {
+    "pseudo": "Gaëtan",
+    "hdv": 13,
+    "clan": "Fils d'Arès"
+  },
+  {
+    "pseudo": "Gibbs",
+    "hdv": 14,
+    "clan": "Tempête"
+  },
+  {
+    "pseudo": "gibe4",
+    "hdv": 14,
+    "clan": "Fils d'Arès"
+  },
+  {
+    "pseudo": "Gorba",
+    "hdv": 14,
+    "clan": "Tinkmaster4"
+  },
+  {
+    "pseudo": "GRONZOZ",
+    "hdv": 14,
+    "clan": "Fils d'Arès"
+  },
+  {
+    "pseudo": "Grouik",
+    "hdv": 14,
+    "clan": "Fils d'Arès"
+  },
+  {
+    "pseudo": "henri",
+    "hdv": 14,
+    "clan": "Tempête"
+  },
+  {
+    "pseudo": "HUGO",
+    "hdv": 13,
+    "clan": "Sympathique"
+  },
+  {
+    "pseudo": "hugoboss",
+    "hdv": 14,
+    "clan": "Sympathique"
+  },
+  {
+    "pseudo": "HUGOBOSS.2",
+    "hdv": 13,
+    "clan": "Sympathique"
+  },
+  {
+    "pseudo": "Jack O'neil",
+    "hdv": 14,
+    "clan": "Sympathique"
+  },
+  {
+    "pseudo": "Jc98745",
+    "hdv": 14,
+    "clan": "Tempête"
+  },
+  {
+    "pseudo": "jeremy",
+    "hdv": 13,
+    "clan": "Tempête"
+  },
+  {
+    "pseudo": "JEROME",
+    "hdv": 14,
+    "clan": "Sympathique"
+  },
+  {
+    "pseudo": "jimmy",
+    "hdv": 14,
+    "clan": "Sympathique"
+  },
+  {
+    "pseudo": "jm",
+    "hdv": 14,
+    "clan": "Sympathique"
+  },
+  {
+    "pseudo": "kaiser91",
+    "hdv": 14,
+    "clan": "Sympathique"
+  },
+  {
+    "pseudo": "Katsumoto San",
+    "hdv": 14,
+    "clan": "Tempête"
+  },
+  {
+    "pseudo": "kazenmoins",
+    "hdv": 14,
+    "clan": "Tempête"
+  },
+  {
+    "pseudo": "Klimt",
+    "hdv": 11,
+    "clan": "Fils d'Arès"
+  },
+  {
+    "pseudo": "Kya",
+    "hdv": 14,
+    "clan": "Fils d'Arès"
+  },
+  {
+    "pseudo": "La Cigogne",
+    "hdv": 13,
+    "clan": "Tinkmaster4"
+  },
+  {
+    "pseudo": "La Fée",
+    "hdv": 14,
+    "clan": "Tempête"
+  },
+  {
+    "pseudo": "le dje",
+    "hdv": 14,
+    "clan": "Tempête"
+  },
+  {
+    "pseudo": "Le Pirate",
+    "hdv": 13,
+    "clan": "Tempête"
+  },
+  {
+    "pseudo": "le rois arthur",
+    "hdv": 14,
+    "clan": "Tempête"
+  },
+  {
+    "pseudo": "Line Ten",
+    "hdv": 13,
+    "clan": "Sympathique"
+  },
+  {
+    "pseudo": "Loficu",
+    "hdv": 13,
+    "clan": "Tempête"
+  },
+  {
+    "pseudo": "Loïc",
+    "hdv": 14,
+    "clan": "Sympathique"
+  },
+  {
+    "pseudo": "lulu",
+    "hdv": 13,
+    "clan": "Tinkmaster4"
+  },
+  {
+    "pseudo": "lulu2",
+    "hdv": 11,
+    "clan": "Tinkmaster4"
+  },
+  {
+    "pseudo": "MASSAÏ",
+    "hdv": 14,
+    "clan": "Tempête"
+  },
+  {
+    "pseudo": "mattéo-lucas",
+    "hdv": 14,
+    "clan": "Tempête"
+  },
+  {
+    "pseudo": "max la menace",
+    "hdv": 12,
+    "clan": "Sympathique"
+  },
+  {
+    "pseudo": "mick",
+    "hdv": 14,
+    "clan": "Tempête"
+  },
+  {
+    "pseudo": "nenesses2",
+    "hdv": 14,
+    "clan": "Tempête"
+  },
+  {
+    "pseudo": "Noky",
+    "hdv": 14,
+    "clan": "Tempête"
+  },
+  {
+    "pseudo": "octo nook",
+    "hdv": 10,
+    "clan": "Fils d'Arès"
+  },
+  {
+    "pseudo": "oligri",
+    "hdv": 14,
+    "clan": "Fils d'Arès"
+  },
+  {
+    "pseudo": "PassPoil",
+    "hdv": 14,
+    "clan": "Tempête"
+  },
+  {
+    "pseudo": "patetlao",
+    "hdv": 14,
+    "clan": "Tempête"
+  },
+  {
+    "pseudo": "petit jean",
+    "hdv": 14,
+    "clan": "Tempête"
+  },
+  {
+    "pseudo": "Phenix.BZH",
+    "hdv": 14,
+    "clan": "Tempête"
+  },
+  {
+    "pseudo": "phicuv",
+    "hdv": 14,
+    "clan": "Tempête"
+  },
+  {
+    "pseudo": "pilote",
+    "hdv": 13,
+    "clan": "Sympathique"
+  },
+  {
+    "pseudo": "Porcepic",
+    "hdv": 13,
+    "clan": "Tempête"
+  },
+  {
+    "pseudo": "Rahan_2007",
+    "hdv": 13,
+    "clan": "Fils d'Arès"
+  },
+  {
+    "pseudo": "RASCASSE",
+    "hdv": 14,
+    "clan": "Tempête"
+  },
+  {
+    "pseudo": "Romu.38",
+    "hdv": 14,
+    "clan": "Tempête"
+  },
+  {
+    "pseudo": "romuald 38",
+    "hdv": 13,
+    "clan": "Tempête"
+  },
+  {
+    "pseudo": "Sam",
+    "hdv": 14,
+    "clan": "Tinkmaster4"
+  },
+  {
+    "pseudo": "SidVonB",
+    "hdv": 14,
+    "clan": "Tempête"
+  },
+  {
+    "pseudo": "SiegfriedVonB",
+    "hdv": 12,
+    "clan": "Fils d'Arès"
+  },
+  {
+    "pseudo": "SiegVonB",
+    "hdv": 13,
+    "clan": "Fils d'Arès"
+  },
+  {
+    "pseudo": "SigiVonB",
+    "hdv": 11,
+    "clan": "Fils d'Arès"
+  },
+  {
+    "pseudo": "SigurdVonB",
+    "hdv": 12,
+    "clan": "Fils d'Arès"
+  },
+  {
+    "pseudo": "SivardVonB",
+    "hdv": 11,
+    "clan": "Fils d'Arès"
+  },
+  {
+    "pseudo": "STRIKER’s",
+    "hdv": 14,
+    "clan": "Tinkmaster4"
+  },
+  {
+    "pseudo": "Taiiji",
+    "hdv": 14,
+    "clan": "Tinkmaster4"
+  },
+  {
+    "pseudo": "Tarkhagal",
+    "hdv": 12,
+    "clan": "Tinkmaster4"
+  },
+  {
+    "pseudo": "thierry",
+    "hdv": 14,
+    "clan": "Tempête"
+  },
+  {
+    "pseudo": "™️⭐SupernaNO⭐iD",
+    "hdv": 14,
+    "clan": "Tempête"
+  },
+  {
+    "pseudo": "Tonio",
+    "hdv": 14,
+    "clan": "Fils d'Arès"
+  },
+  {
+    "pseudo": "twapatapeymoa",
+    "hdv": 14,
+    "clan": "Fils d'Arès"
+  },
+  {
+    "pseudo": "vincent",
+    "hdv": 14,
+    "clan": "Fils d'Arès"
+  },
+  {
+    "pseudo": "wake",
+    "hdv": 14,
+    "clan": "Tempête"
+  },
+  {
+    "pseudo": "Youl",
+    "hdv": 14,
+    "clan": "Tempête"
+  },
+  {
+    "pseudo": "Zelys",
+    "hdv": 14,
+    "clan": "Tempête"
+  },
+  {
+    "pseudo": "zombieland",
+    "hdv": 14,
+    "clan": "Tempête"
+  },
+  {
+    "pseudo": "zorglube",
+    "hdv": 14,
+    "clan": "Tempête"
+  },
+  {
+    "pseudo": "ШДКΞ ЦР",
+    "hdv": 13,
+    "clan": "Tempête"
+  }
 ]
