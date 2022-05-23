@@ -229,7 +229,7 @@
                     ref="toForm2"
                     id="step2"
                     v-if="hdv"
-                    class="min-w-full mt-10 mb-5 px-2 hover:shadow-lg hover:bg-lightgrey rounded-xl"
+                    class="min-w-full mt-10 mb-5 p-8 hover:shadow-lg bg-lightgrey rounded-xl"
                 >
                     <h1
                         class="font-supercell text-2xl md:text-3xl mb-14 text-rouge text-center"
@@ -275,7 +275,7 @@
         </transition>
     </form>
 </template>
-
+../data/pseudos3.json../data/pseudos3.json
 <script>
 import Ligue from './Ligue.vue'
 import { ref, computed } from 'vue'
@@ -422,8 +422,6 @@ export default {
                     'Nouveau pseudo : ' +
                     this.newPseudo +
                     '\n' +
-                    'Clan : ' +
-                    this.clan +
                     '\n' +
                     'Hdv : ' +
                     this.hdv +
