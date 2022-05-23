@@ -398,6 +398,7 @@ export default {
                     Accept: 'application/json',
                 },
                 body: JSON.stringify({
+                    date: this.date,
                     pseudo: this.selectedPseudo,
                     newPseudo: this.newPseudo,
                     clan: this.clan,
