@@ -1,5 +1,5 @@
 <template>
-    <ul class="grid grid-cols-2 md:grid-cols-2 gap-8">
+    <ul class="grid grid-cols-2 md:grid-cols-2 gap-5">
         <li :class="{ active: activeOption === 'Cactus' }">
             <button
                 type="button"
@@ -8,7 +8,7 @@
                 class="mx-auto rounded focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none flex flex-col items-center justify-center"
             >
                 <div
-                    class="shadow w-36 xxs:w-44 xs:w-48 md:w-56 h-44 px-8 py-6 flex flex-col items-center justify-center"
+                    class="shadow w-36 xxs:w-40 xs:w-48 md:w-56 h-44 px-8 py-6 flex flex-col items-center justify-center"
                 >
                     <h3
                         class="mb-1 leading-5 text-orange font-supercell font-bold text-sm md:text-lg lg:xl xl:2xl"
@@ -38,7 +38,7 @@
                 class="mx-auto rounded focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none flex flex-col items-center justify-center"
             >
                 <div
-                    class="shadow w-36 xxs:w-44 xs:w-48 md:w-56 h-44 px-8 py-6 flex flex-col items-center justify-center"
+                    class="shadow w-36 xxs:w-40 xs:w-48 md:w-56 h-44 px-8 py-6 flex flex-col items-center justify-center"
                 >
                     <h3
                         class="mb-1 leading-5 text-orange font-supercell font-bold text-sm md:text-lg lg:xl xl:2xl"
@@ -68,7 +68,7 @@
                 class="mx-auto rounded focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none flex flex-col items-center justify-center"
             >
                 <div
-                    class="shadow w-36 xxs:w-44 xs:w-48 md:w-56 h-44 px-8 py-6 flex flex-col items-center justify-center"
+                    class="shadow w-36 xxs:w-40 xs:w-48 md:w-56 h-44 px-8 py-6 flex flex-col items-center justify-center"
                 >
                     <h3
                         class="mb-1 leading-5 text-orange font-supercell font-bold text-sm md:text-lg lg:xl xl:2xl"
@@ -98,7 +98,7 @@
                 class="mx-auto rounded focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none flex flex-col items-center justify-center"
             >
                 <div
-                    class="shadow w-36 xxs:w-44 xs:w-48 md:w-56 h-44 px-8 py-6 flex flex-col items-center justify-center"
+                    class="shadow w-36 xxs:w-40 xs:w-48 md:w-56 h-44 px-8 py-6 flex flex-col items-center justify-center"
                 >
                     <h3
                         class="mb-1 leading-5 text-orange focus:opacity-100 font-supercell font-bold text-sm md:text-lg lg:xl xl:2xl"
@@ -128,7 +128,7 @@
                 class="mx-auto rounded focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none flex flex-col items-center justify-center"
             >
                 <div
-                    class="shadow w-36 xxs:w-44 xs:w-48 md:w-56 h-44 xxxs:px-1 py-6 flex flex-col items-center justify-center"
+                    class="shadow w-36 xxs:w-40 xs:w-48 md:w-56 h-44 xxxs:px-1 py-6 flex flex-col items-center justify-center"
                 >
                     <h3
                         class="mb-1 leading-5 text-orange font-supercell font-bold text-sm md:text-lg lg:xl xl:2xl"
@@ -158,7 +158,7 @@
                 class="mx-auto rounded focus:ring-2 focus:ring-offset-2 focus:ring-rouge focus:outline-none flex flex-col items-center justify-center"
             >
                 <div
-                    class="shadow w-36 xxs:w-44 xs:w-48 md:w-56 h-44 xxxs:px-1 py-6 flex items-center justify-center"
+                    class="shadow w-36 xxs:w-40 xs:w-48 md:w-56 h-44 xxxs:px-1 py-6 flex items-center justify-center"
                 >
                     <p
                         class="font-supercell text-orange text-sm md:text-lg lg:xl xl:2xl"

@@ -223,13 +223,15 @@
                 </div>
             </div>
         </section>
-        <div class="min-h-screen grid grid-col-1 items-center justify-center">
+        <div
+            class="min-w-full min-h-screen grid grid-col-1 items-center justify-center mt-10 py-6 rounded-xl"
+        >
             <div>
-                <section
+                <div
                     ref="toForm2"
                     id="step2"
                     v-if="hdv"
-                    class="min-w-full mt-10 mb-5 p-8 hover:shadow-lg bg-lightgrey rounded-xl"
+                    class="min-w-full xxs:mx-1 mt-10 mb-5 py-8 px-3 hover:shadow-lg bg-lightgrey rounded-xl"
                 >
                     <h1
                         class="font-supercell text-2xl md:text-3xl mb-14 text-rouge text-center"
@@ -237,18 +239,20 @@
                         Niveau de ligue souhaité
                     </h1>
                     <Ligue v-model="ligue" />
-                </section>
-                <section v-if="hdv" class="min-w-full">
-                    <div class="w-full py-5 px-5 bg-gray-50 rounded-xl">
-                        <button
-                            type="submit"
-                            v-if="!infoSubmit"
-                            class="w-full border border-beige hover:bg-beige transition duration-150 ease-in-out focus:ring-orange rounded-lg font-supercell text-beige hover:text-white px-8 py-4 text-lg focus:outline-none"
+                    <div v-if="hdv" class="min-w-full">
+                        <div
+                            class="w-full py-5 px-5 mt-5 bg-gray-50 rounded-xl"
                         >
-                            Envoyer
-                        </button>
+                            <button
+                                type="submit"
+                                v-if="!infoSubmit"
+                                class="w-full border border-beige hover:bg-beige transition duration-150 ease-in-out focus:ring-orange rounded-lg font-supercell text-beige hover:text-white px-8 py-4 text-lg focus:outline-none"
+                            >
+                                Envoyer
+                            </button>
+                        </div>
                     </div>
-                </section>
+                </div>
             </div>
         </div>
         <transition name="fade">
