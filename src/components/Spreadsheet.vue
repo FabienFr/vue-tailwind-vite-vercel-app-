@@ -284,8 +284,8 @@ import Ligue from './Ligue.vue'
 import { ref, computed } from 'vue'
 import pseudos from '../data/pseudos.json'
 
-// const FORMSPARK_ACTION_URL = 'https://submit-form.com/m1p9xjlp'
-const FORMSPARK_ACTION_URL = 'https://submit-form.com/s4mPXLlR'
+const FORMSPARK_ACTION_URL = 'https://submit-form.com/m1p9xjlp'
+// const FORMSPARK_ACTION_URL = 'https://submit-form.com/s4mPXLlR'
 
 export default {
     name: 'Spreadsheet',
