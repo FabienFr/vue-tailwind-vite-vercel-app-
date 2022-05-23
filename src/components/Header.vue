@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1
-            class="hidden font-supercell text-2xl md:text-4xl font-bold mt-16 mb-8 text-center text-bordeaux"
+            class="hidden sm:block font-supercell text-2xl md:text-4xl font-bold mt-16 mb-8 text-center text-bordeaux"
         >
             {{ title }}
         </h1>
